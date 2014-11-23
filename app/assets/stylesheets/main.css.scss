@@ -1,0 +1,267 @@
+
+@font-face {
+  font-family: 'Neb';
+  font-style: normal;
+  font-weight: 400;
+  // src: url(https://dl.dropboxusercontent.com/u/66196232/NFGsite/hirukoextralight-webfont.ttf);
+  src: url(font_path('hirukoextralight-webfont.ttf'));
+}
+@font-face {
+  font-family: 'NebBlack';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font_path('hirukolightalternate-webfont.ttf'));
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Neb";
+  text-align: center;
+}
+
+p {
+  font-family: Verdana;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: text-shadow, .5s;
+}
+
+li {
+  list-style-type:none;
+  text-align: center;
+  padding: 2px 2px 2px 2px;
+  margin: 2px 2px 2px 2px;
+}
+
+a:hover{
+  text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
+  -webkit-transition: text-shadow, .5s;
+}
+
+#stars {
+  border-bottom: 1px solid white;
+  border-radius: 2px;
+}
+
+#sidebar{
+  width: 29%;
+  position: absolute;
+  display: block;
+  text-align: right;
+  float: left;
+
+}
+
+#center{
+  margin: auto;
+  min-width: 480px;
+  max-width: 1000px;
+  display: block;
+  font-size: 100%;
+}
+
+#right {
+  right:29%;
+  float:right;
+}
+
+#Nav {
+  max-height: 5%;
+  position: relative;
+  margin-left:auto;
+  margin-right: auto;
+  min-width: 480px;
+  margin-bottom: 20px;
+  max-width: 65%;
+  padding: 0;
+}
+
+.fancy {
+  /*border-radius: 5px;*/
+  font-size: 100%;
+  color: #d6cfcf;
+  border-radius: 20px;
+}
+
+.nebTop{
+  top: -2.3em;
+  position: relative;
+  font-family: "Neb";
+  text-align: center;
+  font-size: 5em;
+  text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
+  width: 100%;
+}
+
+#Nav li{
+  display: inline;
+  margin: .25em;
+  text-align: center;
+  border-bottom: 1px solid white;
+  -webkit-transition: border-bottom .5s;
+}
+
+#Nav li a{
+  /*margin: 0 20px 0 20px;*/
+  padding: 2px 7px 2px 7px;
+  min-width: 30px;
+}
+
+
+
+.article {
+  clear: right;
+  text-align: left;
+  margin: auto;
+  max-width: 800px;
+  min-width: 480px;
+  border-bottom: 1px solid white;
+  border-collapse: 5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.articleHeader {
+  clear: right;
+  text-align: left;
+  margin: auto;
+  max-width: 800px;
+  min-width: 480px;
+  border-bottom: 1px solid white;
+  border-collapse: 5px;
+  position: relative;
+}
+
+#stars {
+  margin-right: auto;
+  margin-left: auto;
+  height: 150px;
+  background-image: url(image_path('starryHeader.png'));
+  background-size: 45%;
+  width: 100%;
+}
+
+#blog:hover {
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 4px solid #2837F0;
+}
+
+#pics:hover{
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 4px solid #c85ffc;
+}
+
+#music:hover{
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 4px solid #ff0000;
+}
+
+#videos:hover{
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 4px solid #ff8c00;
+}
+
+#shows:hover{
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 4px solid #fff200;
+}
+
+#contact:hover{
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 4px solid #3bff00;
+
+}
+
+/*css for the lasers*/
+
+#redLaser {
+  background: url(image_path('nebLaserRed.png')) repeat-x top left;
+  height: 26px;
+  background-size: 1900px 26px;
+  -webkit-animation-duration: 2.25s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+#blueLaser {
+    background: url(image_path('nebLaserBlue.png')) repeat-x top left;
+    height: 26px;
+    background-size: 1900px 26px;
+  -webkit-animation-duration: 1.75s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+}
+
+#greenLaser {
+    background: url(image_path('nebLaserGreen.png')) repeat-x top left;
+    height: 26px;
+    background-size: 1900px 26px;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+#goldLaser {
+    background: url(image_path('nebLaserGold.png')) repeat-x top left;
+    height: 26px;
+    background-size: 1900px 26px;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+#purpleLaser {
+    background: url(image_path('nebLaserPurple.png')) repeat-x top left;
+    height: 26px;
+    background-size: 1900px 26px;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+#orangeLaser {
+    background: url(image_path('nebLaserOrange.png')) repeat-x top left;
+    height: 26px;
+    background-size: 1900px 26px;
+    background-position-x: -30em;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+#events{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    -webkit-transform: translateX(-80em );
+  }
+
+  100% {
+    -webkit-transform: translateX(80em);
+  }
+}
+
+@-webkit-keyframes slideback {
+  0% {
+    -webkit-transform: translateX(80em );
+  }
+
+  100% {
+    -webkit-transform: translateX(-80em);
+  }
+}
