@@ -6,8 +6,26 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
+<body>
+    <div id="stars">
+      <div id="redLaser" class="laser"></div>
+      <div id="blueLaser" class="laser"></div>
+      <div id="greenLaser" class="laser"></div>
+      <div id="orangeLaser" class="laser"></div>
+      <div id="goldLaser" class="laser"></div>
+      <div id="purpleLaser" class="laser"></div>
+      <h1 class="nebTop">NEBULA FORCE, GO!</h1>
+    </div>
+
+    <ul id="Nav">
+          <li id="blog"> <a class="fancy" href="">Blog</a> </li>
+          <li id="pics"> <a class="fancy" href="">Pics</a> </li>
+          <li id="music"> <a class="fancy" href="http://nebulaforcego.bandcamp.com/">Music</a> </li>
+          <li id="videos"> <a class="fancy"   href="http://www.youtube.com/user/NebulaForceGo?feature=watch">Videos</a> </li>
+          <li id="shows"> <a class="fancy" href="">Upcoming Shows</a> </li>
+          <li class="fancyLi" id="contact"> <a class="fancy" href="">Contact</a> </li>
+      </ul>
 <%= yield %>
 
 </body>
