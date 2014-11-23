@@ -3,14 +3,13 @@
   font-family: 'Neb';
   font-style: normal;
   font-weight: 400;
-  // src: url(https://dl.dropboxusercontent.com/u/66196232/NFGsite/hirukoextralight-webfont.ttf);
-  src: url(font_path('hirukoextralight-webfont.ttf'));
+  src: url(https://dl.dropboxusercontent.com/u/66196232/NFGsite/hirukoextralight-webfont.ttf);
 }
 @font-face {
   font-family: 'NebBlack';
   font-style: normal;
   font-weight: 400;
-  src: url(font_path('hirukolightalternate-webfont.ttf'));
+  src: url(https://dl.dropboxusercontent.com/u/66196232/NFGsite/hirukolightalternate-webfont.ttf);
 }
 
 body {
@@ -140,7 +139,7 @@ a:hover{
   margin-right: auto;
   margin-left: auto;
   height: 150px;
-  background-image: url(image_path('starryHeader.png'));
+  background-image: url(images/starryHeader.png);
   background-size: 45%;
   width: 100%;
 }
@@ -179,7 +178,7 @@ a:hover{
 /*css for the lasers*/
 
 #redLaser {
-  background: url(image_path('nebLaserRed.png')) repeat-x top left;
+  background: url('images/nebLaserRed.png') repeat-x top left;
   height: 26px;
   background-size: 1900px 26px;
   -webkit-animation-duration: 2.25s;
@@ -189,7 +188,7 @@ a:hover{
 }
 
 #blueLaser {
-    background: url(image_path('nebLaserBlue.png')) repeat-x top left;
+    background: url('images/nebLaserBlue.png') repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
   -webkit-animation-duration: 1.75s;
@@ -200,7 +199,7 @@ a:hover{
 }
 
 #greenLaser {
-    background: url(image_path('nebLaserGreen.png')) repeat-x top left;
+    background: url('images/nebLaserGreen.png') repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
   -webkit-animation-duration: 2s;
@@ -210,7 +209,7 @@ a:hover{
 }
 
 #goldLaser {
-    background: url(image_path('nebLaserGold.png')) repeat-x top left;
+    background: url('images/nebLaserGold.png') repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
   -webkit-animation-duration: 2.5s;
@@ -220,7 +219,7 @@ a:hover{
 }
 
 #purpleLaser {
-    background: url(image_path('nebLaserPurple.png')) repeat-x top left;
+    background: url(images/nebLaserPurple.png) repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
   -webkit-animation-duration: 1.5s;
@@ -230,7 +229,7 @@ a:hover{
 }
 
 #orangeLaser {
-    background: url(image_path('nebLaserOrange.png')) repeat-x top left;
+    background: url('images/nebLaserOrange.png') repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
     background-position-x: -30em;
@@ -265,3 +264,19 @@ a:hover{
     -webkit-transform: translateX(-80em);
   }
 }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
