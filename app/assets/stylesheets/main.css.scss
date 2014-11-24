@@ -5,12 +5,6 @@
   font-weight: 400;
   src: url(font_path('hirukoextralight-webfont.ttf'));
 }
-@font-face {
-  font-family: 'NebBlack';
-  font-style: normal;
-  font-weight: 400;
-  src: url(font_path('hirukolightalternate-webfont.ttf'));
-}
 
 body {
   background-color: black;
@@ -56,49 +50,48 @@ a:hover{
 }
 
 .fancy {
-  font-size: 100%;
   color: #d6cfcf;
-  border-radius: 20px;
 }
 
 .nebTop{
   top: -2.3em;
   position: relative;
   font-family: "Neb";
-  text-align: center;
   font-size: 5em;
-  text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
-  width: 100%;
 }
 
-#blog:hover {
+.glow{
+  text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
+}
+
+.blog:hover {
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #2837F0;
 }
-#pics:hover{
+.pics:hover{
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #c85ffc;
 }
-#music:hover{
+.music:hover{
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #ff0000;
 }
-#videos:hover{
+.videos:hover{
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #ff8c00;
 }
-#shows:hover{
+.shows:hover{
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #fff200;
 }
-#contact:hover{
+.contact:hover{
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #3bff00;
 }
 
 /*css for the lasers*/
 
-#redLaser {
+.redLaser {
   background: url(image_path('nebLaserRed.png')) repeat-x top left;
   height: 26px;
   background-size: 1900px 26px;
@@ -108,7 +101,7 @@ a:hover{
   -webkit-animation-timing-function: linear;
 }
 
-#blueLaser {
+.blueLaser {
     background: url(image_path('nebLaserBlue.png')) repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
@@ -119,7 +112,7 @@ a:hover{
 
 }
 
-#greenLaser {
+.greenLaser {
     background: url(image_path('nebLaserGreen.png')) repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
@@ -129,7 +122,7 @@ a:hover{
   -webkit-animation-timing-function: linear;
 }
 
-#goldLaser {
+.goldLaser {
     background: url(image_path('nebLaserGold.png')) repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
@@ -139,7 +132,7 @@ a:hover{
   -webkit-animation-timing-function: linear;
 }
 
-#purpleLaser {
+.purpleLaser {
     background: url(image_path('nebLaserPurple.png')) repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
@@ -149,7 +142,7 @@ a:hover{
   -webkit-animation-timing-function: linear;
 }
 
-#orangeLaser {
+.orangeLaser {
     background: url(image_path('nebLaserOrange.png')) repeat-x top left;
     height: 26px;
     background-size: 1900px 26px;
@@ -160,28 +153,12 @@ a:hover{
   -webkit-animation-timing-function: linear;
 }
 
-#events{
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
 @-webkit-keyframes slidein {
   0% {
     -webkit-transform: translateX(-80em );
   }
 
   100% {
-    -webkit-transform: translateX(80em);
-  }
-}
-
-@-webkit-keyframes slideback {
-  0% {
-    -webkit-transform: translateX(80em );
-  }
-
-  100% {
-    -webkit-transform: translateX(-80em);
+     -webkit-transform: translateX(80em);
   }
 }
