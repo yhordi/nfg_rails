@@ -1,9 +1,16 @@
 <% @posts.each do |post| %>
-  <div>
-    <h2>
+  <div class="col left">
+    <h1 class="headline">
       <%= post.title %>
-    </h2>
-    <p><%= post.body %>
+    </h1>
+    <h4 >
+      by: <%= post.author %>
+    </h4>
+    <p class="article">
+      <%= post.body %>
+    </p>
+    <p class="footer divider">
+      <%= post.created_at %>
     </p>
   </div>
 <% end %>
