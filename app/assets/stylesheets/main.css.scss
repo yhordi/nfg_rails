@@ -42,9 +42,11 @@ a:hover{
   -webkit-transition: text-shadow, .5s;
 }
 
-#stars {
+.stars {
+  height: 9.5em;
+  background-image: url(image_path('starryHeader.png'));
+  background-size: 45%;
   border-bottom: 1px solid white;
-  border-radius: 2px;
 }
 
 #sidebar{
@@ -53,7 +55,6 @@ a:hover{
   display: block;
   text-align: right;
   float: left;
-
 }
 
 #center{
@@ -106,12 +107,9 @@ a:hover{
 }
 
 #Nav li a{
-  /*margin: 0 20px 0 20px;*/
   padding: 2px 7px 2px 7px;
   min-width: 30px;
 }
-
-
 
 .article {
   clear: right;
@@ -136,14 +134,6 @@ a:hover{
   position: relative;
 }
 
-#stars {
-  margin-right: auto;
-  margin-left: auto;
-  height: 150px;
-  background-image: url(image_path('starryHeader.png'));
-  background-size: 45%;
-  width: 100%;
-}
 
 #blog:hover {
   -webkit-transition: border-bottom .5s;
