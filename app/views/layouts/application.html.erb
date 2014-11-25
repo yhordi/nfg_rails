@@ -8,6 +8,9 @@
 </head>
 
 <body>
+    <% if @user %>
+      <%= render "sessions/show" %>
+    <% end %>
     <div class="container">
       <div class="stars col">
         <div class="laser redLaser"></div>
