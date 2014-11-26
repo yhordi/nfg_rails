@@ -71,6 +71,9 @@ a:hover{
 .footer{
   font-size: 10px;
 }
+.inline{
+  display: inline;
+}
 
 .blog:hover {
   -webkit-transition: border-bottom .5s;
@@ -98,6 +101,12 @@ a:hover{
 }
 .left{
   text-align: left;
+}
+.right{
+  text-align: right;
+}
+.login{
+  background-color: rgb(55, 55, 72);
 }
 
 /*css for the lasers*/

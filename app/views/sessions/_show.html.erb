@@ -1,6 +1,4 @@
-<div class="col right inline divider">
-  <%= "Welcome, #{session[:username].titleize} Force."  %>
-  <%= form_tag("/sessions", method: "delete") do %>
-    <%= submit_tag "logout" %>
-  <% end %>
+<div class="col right inline divider login">
+  <%= "Welcome, #{session[:username]} Force."  %>
+    <%= link_to "logout", session_path(session[:id]), method: "delete"%>
 </div>

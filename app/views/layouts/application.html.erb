@@ -9,10 +9,10 @@
 
 <body>
 
-      <% if session %>
+    <div class="container">
+      <% if session[:id] %>
         <%= render "sessions/show" %>
       <% end %>
-    <div class="container">
       <div class="stars col">
         <div class="laser redLaser"></div>
         <div class="laser blueLaser"></div>

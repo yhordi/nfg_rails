@@ -1,13 +1,12 @@
 class SessionsController < ApplicationController
   include AuthenticationConcern
   protect_from_forgery with: :exception
+
   def create
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       login(user)
       redirect_to root_path
-    else
-      render :json => {:errors => "Invalid email and password combination"}, :status => :unprocessable_entity
     end
   end
 
