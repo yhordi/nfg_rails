@@ -1,5 +1,4 @@
-class UsersController < ApplicationController
-  include AuthenticationConcern
+class UsersController < ActionController::Base
 
   def show
     @user = User.find params[:id]

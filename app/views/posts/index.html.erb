@@ -9,6 +9,12 @@
     <p class="article">
       <%= post.body %>
     </p>
+    <div>
+      <% if session[:user_id] %>
+        <%= link_to "Edit |" %>
+        <%= link_to " Delete" %>
+      <% end %>
+    </div>
     <p class="footer divider">
       <%= post.created_at %>
     </p>
