@@ -1,0 +1,10 @@
+<div class ="log_in">
+  <p class="error">
+    <%= flash[:error] %>
+  </p>
+    <%= form_tag("/sessions", method: "post") do %>
+      <%= submit_tag "Log In" %>
+      <%= text_field_tag :username, nil, :placeholder => "Username"  %>
+      <%= password_field_tag :password, nil, :placeholder => "Password"  %>
+    <% end %>
+</div>

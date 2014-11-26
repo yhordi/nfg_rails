@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#index'
+  root 'posts#index'
+  resources :sessions, only: [:create, :new, :destroy, :show]
+  resources :users, only: [:create, :show]
 end

@@ -8,7 +8,11 @@
 </head>
 
 <body>
+
     <div class="container">
+      <% if session[:id] %>
+        <%= render "sessions/show" %>
+      <% end %>
       <div class="stars col">
         <div class="laser redLaser"></div>
         <div class="laser blueLaser"></div>
@@ -26,6 +30,7 @@
         <li class="shows"> <a class="fancy" href="">Upcoming Shows</a> </li>
         <li class="contact"> <a class="fancy" href="">Contact</a> </li>
       </ul>
+
     <%= yield %>
   </div>
 </body>

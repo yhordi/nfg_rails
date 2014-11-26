@@ -5,14 +5,15 @@
   font-weight: 400;
   src: url(font_path('hirukoextralight-webfont.ttf'));
 }
-
 body {
   background-color: black;
   color: white;
   font-family: "Neb";
   text-align: center;
 }
-
+.error{
+  color: red;
+}
 p {
   font-family: Verdana;
 }
@@ -34,10 +35,15 @@ a:hover{
   background-size: 45%;
   border-bottom: 1px solid white;
 }
-
+.divider{
+  border-bottom: 1px dashed white;
+}
+.article{
+  font-size: 1.2em;
+}
 .nav {
   min-width: 480px;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
   li {
     display: inline;
     margin: .25em;
@@ -63,6 +69,12 @@ a:hover{
 .glow{
   text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
 }
+.footer{
+  font-size: 10px;
+}
+.inline{
+  display: inline;
+}
 
 .blog:hover {
   -webkit-transition: border-bottom .5s;
@@ -87,6 +99,15 @@ a:hover{
 .contact:hover{
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #3bff00;
+}
+.left{
+  text-align: left;
+}
+.right{
+  text-align: right;
+}
+.login{
+  background-color: rgb(55, 55, 72);
 }
 
 /*css for the lasers*/
