@@ -1,7 +1,7 @@
 <div class ="log_in">
-  <div class="error">
-    <%= flash[:notice] if flash[:notice] %>
-  </div>
+  <p class="error">
+    <%= flash[:error] %>
+  </p>
     <%= form_tag("/sessions", method: "post") do %>
       <%= submit_tag "Log In" %>
       <%= text_field_tag :username, nil, :placeholder => "Username"  %>

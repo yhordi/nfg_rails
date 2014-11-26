@@ -10,7 +10,7 @@
       <%= post.body %>
     </p>
     <div>
-      <% if session[:user_id] %>
+      <% if session[:id] %>
         <%= link_to "Edit |" %>
         <%= link_to " Delete" %>
       <% end %>

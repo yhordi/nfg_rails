@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       login(user)
       redirect_to root_path
+    else
+      redirect_to new_session_path, :flash => { :error => "Incorrect user name or password. Please try again." }
     end
   end
 
@@ -17,7 +19,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.clear
+    session[:id] = nil
     redirect_to root_path
   end
 

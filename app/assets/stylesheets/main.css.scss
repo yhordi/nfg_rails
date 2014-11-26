@@ -5,14 +5,15 @@
   font-weight: 400;
   src: url(font_path('hirukoextralight-webfont.ttf'));
 }
-
 body {
   background-color: black;
   color: white;
   font-family: "Neb";
   text-align: center;
 }
-
+.error{
+  color: red;
+}
 p {
   font-family: Verdana;
 }
