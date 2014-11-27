@@ -36,6 +36,7 @@ a:hover{
   background-image: url(image_path('starryHeader.png'));
   background-size: 45%;
   border-bottom: 1px solid white;
+  overflow: hidden;
 }
 .divider{
   border-bottom: 1px dashed white;
@@ -186,3 +187,12 @@ a:hover{
   }
 }
 
+@media (min-width: 375px) and (orientation: portrait){
+  .nebTop{
+    font-size: 2.8em;
+    z-index: 1;
+  }
+  .nav{
+    // font-size: 1em;
+  }
+}
