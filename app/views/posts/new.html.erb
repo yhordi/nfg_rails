@@ -1,0 +1,7 @@
+<%= form_tag(controller: "posts", action: "create", method: "post") do %>
+  <%= label_tag(:title, "Post Title") %>
+  <%= text_field_tag(:title) %>
+  <%= label_tag(:body, "Post Body") %>
+  <%= text_area_tag(:body, "", size: "60x12") %>
+  <%= submit_tag("create")%>
+<% end %>

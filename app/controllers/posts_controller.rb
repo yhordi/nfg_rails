@@ -3,7 +3,19 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def new
+  end
+
   def create
+    p "^"*50
+    p params
+    p "^"*50
+    post = Post.new
+    post.title = params[:title]
+    post.body = params[:body]
+    post.author = "#{session[:username].titleize} Force"
+    redirect_to root_path
+    post.save!
   end
 
   def show

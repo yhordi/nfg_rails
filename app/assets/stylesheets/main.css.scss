@@ -8,16 +8,6 @@ body {
   background-color: black;
   color: white;
   font-family: "Neb";
-  text-align: center;
-}
-.error{
-  color: red;
-}
-.notice{
-  color: yellow;
-}
-.laser{
-  overflow: hidden;
 }
 p {
   font-family: Verdana;
@@ -46,6 +36,15 @@ a:hover{
 }
 .article{
   font-size: 1.2em;
+}
+.error{
+  color: red;
+}
+.notice{
+  color: yellow;
+}
+.laser{
+  overflow: hidden;
 }
 .nav {
   min-width: 480px;
@@ -84,6 +83,9 @@ a:hover{
 .inline{
   display: inline;
 }
+.center{
+  text-align: center;
+}
 form{
   input, textarea, .byline{
     display: block;
@@ -120,7 +122,7 @@ form{
 .right{
   text-align: right;
 }
-.login{
+.admin{
   background-color: rgb(55, 55, 72);
 }
 
