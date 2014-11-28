@@ -1,4 +1,4 @@
-<div class="col right inline divider login">
+<div class="col right divider login">
   <%= "Welcome, #{session[:username].titleize} Force."  %>
     <%= link_to "logout", session_path(session[:id]), method: "delete"%>
 </div>
