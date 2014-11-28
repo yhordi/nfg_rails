@@ -22,8 +22,8 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.body = params[:post][:body]
     post.title = params[:post][:title]
+    post.body = params[:post][:body]
     post.save!
     redirect_to root_path
   end
