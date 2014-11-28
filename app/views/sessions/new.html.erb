@@ -1,3 +1,4 @@
+<% if session[:id] == nil %>
 <div class ="log_in">
   <p class="error">
     <%= flash[:error] %>
@@ -8,3 +9,6 @@
       <%= password_field_tag :password, nil, :placeholder => "Password"  %>
     <% end %>
 </div>
+<% else %>
+  <p class="notice">You're already logged in.</p>
+<% end %>

@@ -10,7 +10,7 @@
 <body>
 
     <div class="container">
-      <% if session[:id] %>
+      <% if session[:id] != nil %>
         <%= render "sessions/show" %>
       <% end %>
       <div class="stars col">

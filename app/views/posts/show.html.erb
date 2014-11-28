@@ -1,4 +1,4 @@
-<% if session[:id] == false %>
+<% if session[:id] == nil %>
   <h1>
     <%= @post.title %>
   </h1>
@@ -16,6 +16,6 @@
       by <%= session[:username].titleize%> Force
     </div>
     <%= f.text_area :body, size: "60x12"%>
-    <%= f.submit "update" %>
+    <%= f.submit "Update", action: "update" %>
   <% end %>
 <% end %>

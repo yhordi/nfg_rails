@@ -7,11 +7,16 @@ class PostsController < ApplicationController
   end
 
   def show
+    p session[:id]
     @post = Post.find(params[:id])
   end
 
   def update
-    p params
+    post = Post.find(params[:id])
+    post.body = params[:post][:body]
+    post.title = params[:post][:title]
+    post.save!
+    redirect_to root_path
   end
 
   def destroy
