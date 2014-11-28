@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Neb';
   font-style: normal;
@@ -13,6 +12,9 @@ body {
 }
 .error{
   color: red;
+}
+.laser{
+  overflow: hidden;
 }
 p {
   font-family: Verdana;
@@ -34,6 +36,7 @@ a:hover{
   background-image: url(image_path('starryHeader.png'));
   background-size: 45%;
   border-bottom: 1px solid white;
+  overflow: hidden;
 }
 .divider{
   border-bottom: 1px dashed white;
@@ -60,14 +63,17 @@ a:hover{
 }
 
 .nebTop{
-  top: -2.3em;
+  top: -1.7em;
   position: relative;
   font-family: "Neb";
   font-size: 5em;
 }
+.headline{
+  font-size: 2em;
+}
 
 .glow{
-  text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
 }
 .footer{
   font-size: 10px;
@@ -180,6 +186,16 @@ a:hover{
   }
 
   100% {
-     -webkit-transform: translateX(80em);
+     -webkit-transform: translateX(100em);
+  }
+}
+
+@media (min-width: 375px) and (orientation: portrait){
+  .nebTop{
+    font-size: 2.8em;
+    z-index: 1;
+  }
+  .nav{
+    // font-size: 1em;
   }
 }
