@@ -7,9 +7,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    p "^"*50
-    p params
-    p "^"*50
     post = Post.new
     post.title = params[:title]
     post.body = params[:body]
@@ -32,5 +29,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to root_path
   end
 end

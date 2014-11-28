@@ -14,12 +14,6 @@
     <p class="article">
       <%= post.body %>
     </p>
-    <div class="admin">
-      <% if session[:id] != nil %>
-        <%= link_to "Edit |" %>
-        <%= link_to " Delete" %>
-      <% end %>
-    </div>
     <p class="footer divider">
       <%= post.created_at %>
     </p>

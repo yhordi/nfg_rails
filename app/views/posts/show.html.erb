@@ -8,7 +8,9 @@
   <p>
     <%= @post.body %>
   </p>
-  <p class="footer"><%= @post.created_at %></p>
+  <p class="footer">
+    <%= @post.created_at %>
+  </p>
 <% else %>
   <%= form_for @post, url: {action: "update"} do |f| %>
     <%= f.text_field :title %>
@@ -19,3 +21,4 @@
     <%= f.submit "Update", action: "update" %>
   <% end %>
 <% end %>
+<%= link_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
