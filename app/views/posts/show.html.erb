@@ -1,7 +1,21 @@
-<h1><%= @post.title %></h1>
-<h4>By <%= @post.author %></h4>
-<p><%= @post.body %></p>
-<p class="footer"><%= @post.created_at %></p>
-<% if session[:id] %>
-  <p>yo dawg</p>
+<% if session[:id] == false %>
+  <h1>
+    <%= @post.title %>
+  </h1>
+  <h4>
+    By <%= @post.author %>
+  </h4>
+  <p>
+    <%= @post.body %>
+  </p>
+  <p class="footer"><%= @post.created_at %></p>
+<% else %>
+  <%= form_for @post, url: {action: "update"} do |f| %>
+    <%= f.text_field :title %>
+    <div class="byline">
+      by <%= session[:username].titleize%> Force
+    </div>
+    <%= f.text_area :body, size: "60x12"%>
+    <%= f.submit "update" %>
+  <% end %>
 <% end %>

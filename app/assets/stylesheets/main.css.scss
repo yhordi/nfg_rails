@@ -81,7 +81,12 @@ a:hover{
 .inline{
   display: inline;
 }
-
+form{
+  input, textarea, .byline{
+    display: block;
+    text-align: left;
+  }
+}
 .blog:hover {
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid #2837F0;
