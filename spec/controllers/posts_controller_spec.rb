@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe PostsController  do
+    let!(:user) { FactoryGirl.create :user }
     let!(:post) { FactoryGirl.create :post }
-    let(:attributes) { FactoryGirl.attributes_for :post }
   describe 'GET #index' do
     it 'renders the index page' do
       get :index
@@ -10,12 +10,16 @@ describe PostsController  do
     end
   end
   describe 'GET #show' do
-    xit 'renders the show page' do
+    it 'renders the show page' do
+      get :show, id: post.id
+      expect(response).to render_template(:show)
     end
   end
   describe 'PUT #update' do
-    let!(:title) { "A treatise on Malomars." }
-    xit 'updates a field on a blog post' do
+    let(:title) { "A treatise on Malomars." }
+    it 'updates a field on a blog post' do
+      put :update, id: post.id, post: {title: title}
+      expect(post.reload.title).to eq(post.title)
     end
   end
   describe 'POST #create' do
