@@ -15,6 +15,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'factory_girl_rails'
 group :development, :test do
+  gem 'simplecov', :require => false
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'capybara'
   gem 'selenium-webdriver'

@@ -11,12 +11,11 @@ class PostsController < ApplicationController
     post.title = params[:title]
     post.body = params[:body]
     post.author = "#{session[:username].titleize} Force"
-    redirect_to root_path
     post.save!
+    redirect_to root_path
   end
 
   def show
-    p session[:id]
     @post = Post.find(params[:id])
   end
 
