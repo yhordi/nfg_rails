@@ -4,13 +4,14 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
-    post = Post.new
-    post.title = params[:title]
-    post.body = params[:body]
-    post.author = "#{session[:username].titleize} Force"
+    post = Post.new(post_params)
+    author = "#{session[:username].titleize} Force"
+    p post
+    post.author = author
     post.save!
     redirect_to root_path
   end
@@ -21,9 +22,7 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.title = params[:post][:title]
-    post.body = params[:post][:body]
-    post.save!
+    post.update_attributes(post_params)
     redirect_to root_path
   end
 
@@ -31,5 +30,12 @@ class PostsController < ApplicationController
     post = Post.find(params[:id])
     post.destroy
     redirect_to root_path
+  end
+
+  private
+
+  def post_params
+    p params
+    params.require(:post).permit(:title, :body, :author, :created_at)
   end
 end

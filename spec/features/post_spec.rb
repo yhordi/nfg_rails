@@ -13,8 +13,8 @@ describe "Post", js: true do
     it "creates a new post" do
       visit root_path
       click_on "New Blog Post"
-      fill_in "Post Title", with: post.title
-      fill_in "Post Body", with: post.body
+      fill_in "title", with: post.title
+      fill_in "body", with: post.body
       click_on "create"
       expect(page).to have_content(post.title)
     end

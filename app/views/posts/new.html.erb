@@ -1,7 +1,7 @@
-<%= form_tag(controller: "posts", action: "create", method: "post") do %>
-  <%= label_tag(:title, "Post Title") %>
-  <%= text_field_tag(:title) %>
-  <%= label_tag(:body, "Post Body") %>
-  <%= text_area_tag(:body, "", size: "60x12") %>
-  <%= submit_tag("create")%>
+<%= form_for @post do |f| %>
+  Post Title: <%= f.text_field :title, placeholder: "title" %>
+  Author: <%= session[:username]%>
+  <br></br>
+  Post Body: <%= f.text_area :body, :cols => "60", :rows => "10", placeholder: "body" %>
+  <%= f.submit "create" %>
 <% end %>
