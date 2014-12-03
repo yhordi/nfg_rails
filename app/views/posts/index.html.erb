@@ -8,9 +8,9 @@
     <div class="headline">
       <%= link_to post.title, post_path(post.id)%>
     </div>
-    <h4 >
-      by: <%= post.author %>
-    </h4>
+    <div class="muted">
+      by: <%= post.author.titleize %> Force
+    </div>
     <p class="article">
       <%= post.body %>
     </p>
