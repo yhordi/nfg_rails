@@ -15,7 +15,7 @@
       <%= post.body %>
     </p>
     <p class="footer divider muted">
-      <%= post.created_at.strftime("%A, %d %b %Y %l:%M %p") %>
+      <%= format(post.created_at) %>
     </p>
   </div>
 <% end %>
