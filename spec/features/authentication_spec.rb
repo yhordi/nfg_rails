@@ -8,9 +8,7 @@ describe "Authentication", js: true do
       fill_in "Username", with: user.username
       fill_in "Password", with: user.password
       click_on "Log In"
-      within(".login") do
-        expect(page).to have_content("#{user.username.titleize}")
-      end
+      expect(page).to have_content("#{user.username.titleize}")
     end
   end
 end

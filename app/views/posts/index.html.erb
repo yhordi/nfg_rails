@@ -1,7 +1,12 @@
+<div class="admin">
+  <% if session[:id] != nil %>
+  <%= link_to "New Blog Post", new_post_path %>
+<% end %>
+</div>
 <% @posts.each do |post| %>
   <div class="col left">
     <div class="headline">
-      <%= post.title %>
+      <%= link_to post.title, post_path(post.id)%>
     </div>
     <h4 >
       by: <%= post.author %>
@@ -9,12 +14,6 @@
     <p class="article">
       <%= post.body %>
     </p>
-    <div>
-      <% if session[:id] %>
-        <%= link_to "Edit |" %>
-        <%= link_to " Delete" %>
-      <% end %>
-    </div>
     <p class="footer divider">
       <%= post.created_at %>
     </p>

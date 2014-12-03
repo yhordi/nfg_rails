@@ -1,0 +1,26 @@
+<% if session[:id] == nil %>
+  <h1>
+    <%= @post.title %>
+  </h1>
+  <h4>
+    By <%= @post.author %>
+  </h4>
+  <p>
+    <%= @post.body %>
+  </p>
+  <p class="footer">
+    <%= @post.created_at %>
+  </p>
+<% else %>
+  <%= form_for @post, url: {action: "update"} do |f| %>
+    <%= f.label(:title, "Post Title") %>
+    <%= f.text_field :title %>
+    <div class="byline">
+      by <%= session[:username].titleize%> Force
+    </div>
+    <%= f.label(:body, "Post Body") %>
+    <%= f.text_area :body, size: "60x12"%>
+    <%= f.submit "Update", action: "update" %>
+  <% end %>
+<% end %>
+<%= link_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>

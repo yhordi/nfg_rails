@@ -10,7 +10,7 @@
 <body>
 
     <div class="container">
-      <% if session[:id] %>
+      <% if session[:id] != nil %>
         <%= render "sessions/show" %>
       <% end %>
       <div class="stars col">
@@ -20,13 +20,13 @@
         <div class="laser orangeLaser"></div>
         <div class="laser goldLaser"></div>
         <div class="laser purpleLaser"></div>
-        <div class="nebTop col glow">NEBULA FORCE, GO!</div>
+        <div class="nebTop col glow center">NEBULA FORCE, GO!</div>
       </div>
-      <ul class="nav col">
-        <li class="blog"> <a class="fancy" href="">Blog</a> </li>
+      <ul class="nav col center">
+        <li class="blog"> <a class="fancy" href="/">Blog</a> </li>
         <li class="pics"> <a class="fancy" href="">Pics</a> </li>
         <li class="music"> <a class="fancy" href="http://nebulaforcego.bandcamp.com/">Music</a> </li>
-        <li class="videos"> <a class="fancy"   href="http://www.youtube.com/user/NebulaForceGo?feature=watch">Videos</a> </li>
+        <li class="videos"> <a class="fancy" href="http://www.youtube.com/user/NebulaForceGo?feature=watch">Videos</a> </li>
         <li class="shows"> <a class="fancy" href="">Upcoming Shows</a> </li>
         <li class="contact"> <a class="fancy" href="">Contact</a> </li>
       </ul>
