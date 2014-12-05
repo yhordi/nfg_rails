@@ -4,6 +4,12 @@
   font-weight: 400;
   src: url(font_path('hirukoextralight-webfont.ttf'));
 }
+$ruby: #ff0000;
+$sapphire: #2837F0;
+$emerald: #3bff00;
+$amber: #ff8c00;
+$amethyst: #c85ffc;
+$gold: #fff200;
 body {
   background-color: black;
   color: white;
@@ -43,9 +49,7 @@ a:hover{
 .notice{
   color: yellow;
 }
-.laser{
-  overflow: hidden;
-}
+
 .nav {
   min-width: 480px;
   margin-bottom: 1em;
@@ -65,7 +69,7 @@ a:hover{
 }
 
 .nebTop{
-  top: -1.7em;
+  top: -1.3em;
   position: relative;
   font-family: "Neb";
   font-size: 5em;
@@ -94,27 +98,27 @@ form{
 }
 .blog:hover {
   -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid #2837F0;
+  border-bottom: 2px solid $sapphire;
 }
 .pics:hover{
   -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid #c85ffc;
+  border-bottom: 2px solid $amethyst;
 }
 .music:hover{
   -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid #ff0000;
+  border-bottom: 2px solid $ruby;
 }
 .videos:hover{
   -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid #ff8c00;
+  border-bottom: 2px solid $amber;
 }
 .shows:hover{
   -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid #fff200;
+  border-bottom: 2px solid $gold;
 }
 .contact:hover{
   -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid #3bff00;
+  border-bottom: 2px solid $emerald;
 }
 .left{
   text-align: left;
@@ -130,66 +134,77 @@ form{
 }
 /*css for the lasers*/
 
+.laser{
+  overflow: hidden;
+  height: 2px;
+  width:25%;
+  margin: 1em;
+}
 .redLaser {
-  background: url(image_path('nebLaserRed.png')) repeat-x top left;
-  height: 26px;
-  background-size: 1900px 26px;
+  background-color: $ruby;
   -webkit-animation-duration: 2.25s;
   -webkit-animation-name: slidein;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(255,0,0,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(255,0,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(255,0,0,1);
 }
 
 .blueLaser {
-    background: url(image_path('nebLaserBlue.png')) repeat-x top left;
-    height: 26px;
-    background-size: 1900px 26px;
+  background-color: $sapphire;
   -webkit-animation-duration: 1.75s;
   -webkit-animation-name: slidein;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(40,55,240,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(40,55,240,1);
+  box-shadow: 0px 0px 25px 2px rgba(40,55,240,1);
 }
 
 .greenLaser {
-    background: url(image_path('nebLaserGreen.png')) repeat-x top left;
-    height: 26px;
-    background-size: 1900px 26px;
+  background-color: $emerald;
   -webkit-animation-duration: 2s;
   -webkit-animation-name: slidein;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(59,255,0,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(59,255,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(59,255,0,1);
 }
 
 .goldLaser {
-    background: url(image_path('nebLaserGold.png')) repeat-x top left;
-    height: 26px;
-    background-size: 1900px 26px;
+  background-color: $gold;
   -webkit-animation-duration: 2.5s;
   -webkit-animation-name: slidein;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(255,242,0,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(255,242,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(255,242,0,1);
 }
 
 .purpleLaser {
-    background: url(image_path('nebLaserPurple.png')) repeat-x top left;
-    height: 26px;
-    background-size: 1900px 26px;
+  background-color: $amethyst;
   -webkit-animation-duration: 1.5s;
   -webkit-animation-name: slidein;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(200,95,252,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(200,95,252,1);
+  box-shadow: 0px 0px 25px 2px rgba(200,95,252,1);
 }
 
 .orangeLaser {
-    background: url(image_path('nebLaserOrange.png')) repeat-x top left;
-    height: 26px;
-    background-size: 1900px 26px;
-    background-position-x: -30em;
-  -webkit-animation-duration: 2s;
+  background-color: $amber;
+  background-position-x: -30em;
+  -webkit-animation-duration: 2.1s;
   -webkit-animation-name: slidein;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(255,140,0,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(255,140,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(255,140,0,1);
 }
 
 @-webkit-keyframes slidein {
