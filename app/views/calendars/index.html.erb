@@ -1,0 +1,8 @@
+<div>
+  <h2><%= @parse["summary"] %></h2>
+  <% @parse["items"].each do |item| %>
+  <p><%= item["summary"] %></p>
+  <p><%= item["location"] %></p>
+  <p><%= item["start"]["datetime"] %> </p>
+  <% end %>
+</div>
