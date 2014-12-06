@@ -3,6 +3,7 @@
   <% @parse["items"].each do |item| %>
   <p><%= item["summary"] %></p>
   <p><%= item["location"] %></p>
-  <p><%= item["start"]["datetime"] %> </p>
+  <% time = DateTime.iso8601(item["start"]["dateTime"]) %>
+  <p><%= format(time) %> </p>
   <% end %>
 </div>
