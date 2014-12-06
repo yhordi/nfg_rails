@@ -1,9 +1,13 @@
 <div>
-  <h2><%= @parse["summary"] %></h2>
+  <h2 class="divider"><%= @parse["summary"] %></h2>
   <% @parse["items"].each do |item| %>
   <p><%= item["summary"] %></p>
   <p><%= item["location"] %></p>
   <% time = DateTime.iso8601(item["start"]["dateTime"]) %>
-  <p><%= format(time) %> </p>
+  <p><%= format_time(time) %> </p>
   <% end %>
 </div>
+<%= form_for @calendar do |f| %>
+  <%= f.submit "create" %>
+<% end %>
+
