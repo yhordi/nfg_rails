@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141206193612) do
+ActiveRecord::Schema.define(version: 20141207190926) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141206193612) do
     t.string "description"
     t.string "location"
     t.string "maplink"
+    t.string "readable_time"
   end
 
   create_table "posts", force: true do |t|

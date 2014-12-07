@@ -1,12 +1,22 @@
 <div>
   <h1>Upcoming Shows</h2>
   <% @calendar.each do |item| %>
-  <p><%= item[:summary] %></p>
-  <p><%= item[:location] %></p>
-  <p><%= item[:time] %> </p>
+  <ul>
+    <li>
+      <%= item[:summary] %>
+    </li>
+    <ul>
+      <li>
+        <%= item[:location] %>
+      </li>
+      <li>
+        <%= item[:readable_time] %>
+      </li>
+    </ul>
+  </ul>
   <% end %>
 </div>
-<% if session[:user_id] %>
+<% if session[:id] != nil %>
   <%= form_for Calendar.new do |f| %>
   <%= f.submit "create" %>
   <% end %>

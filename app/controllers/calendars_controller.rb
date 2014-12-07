@@ -1,7 +1,7 @@
 require 'json'
 class CalendarsController < ApplicationController
   def index
-    @calendar = Calendar.all
+    @calendar = Calendar.order(time: :desc)
   end
 
   def create
@@ -12,7 +12,8 @@ class CalendarsController < ApplicationController
       time = DateTime.iso8601(item["start"]["dateTime"])
       @calendar = Calendar.new
       @calendar.summary = item["summary"]
-      @calendar.time = time.strftime("%A, %d %b %Y %l:%M %p")
+      @calendar.time = time
+      @calendar.readable_time = time.strftime("%A, %d %b %Y %l:%M %p")
       @calendar.location= item["location"]
       @calendar.save!
     end
