@@ -1,6 +1,6 @@
 <%= form_for @post do |f| %>
   Post Title: <%= f.text_field :title, placeholder: "title" %>
-  Author: <%= session[:username]%>
+  Author: <%= session[:username].titleize + " Force"%>
   <br></br>
   Post Body: <%= f.text_area :body, :cols => "60", :rows => "10", placeholder: "body" %>
   <%= f.submit "create" %>

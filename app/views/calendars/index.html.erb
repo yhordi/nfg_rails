@@ -1,11 +1,11 @@
 <div>
-  <h1>Upcoming Shows</h2>
+  <h1 class="neb">Upcoming Shows</h2>
   <% @calendar.each do |item| %>
-  <ul>
+  <ul class="events">
     <li>
-      <%= item[:summary] %>
+      <h2 class="neb"><%= item[:summary] %></h2>
     </li>
-    <ul>
+    <ul class="events">
       <li>
         <%= item[:location] %>
       </li>
