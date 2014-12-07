@@ -1,13 +1,13 @@
 <div>
-  <h2 class="divider"><%= @parse["summary"] %></h2>
-  <% @parse["items"].each do |item| %>
-  <p><%= item["summary"] %></p>
-  <p><%= item["location"] %></p>
-  <% time = DateTime.iso8601(item["start"]["dateTime"]) %>
-  <p><%= format_time(time) %> </p>
+  <h1>Upcoming Shows</h2>
+  <% @calendar.each do |item| %>
+  <p><%= item[:summary] %></p>
+  <p><%= item[:location] %></p>
+  <p><%= item[:time] %> </p>
   <% end %>
 </div>
-<%= form_for @calendar do |f| %>
+<% if session[:user_id] %>
+  <%= form_for Calendar.new do |f| %>
   <%= f.submit "create" %>
+  <% end %>
 <% end %>
-
