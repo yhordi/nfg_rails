@@ -16,7 +16,7 @@
   </ul>
   <% end %>
 </div>
-<% if session[:id] != nil %>
+<% if session[:id] != nil && Calendar.first == nil %>
   <%= form_for Calendar.new do |f| %>
   <%= f.submit "create" %>
   <% end %>
