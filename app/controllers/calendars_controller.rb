@@ -1,4 +1,6 @@
 require 'json'
+include TimeHelper
+
 class CalendarsController < ApplicationController
   def index
     @calendars = Calendar.order(time: :asc)
@@ -14,7 +16,7 @@ class CalendarsController < ApplicationController
       @calendar.summary = item["summary"]
       @calendar.time = time
       @calendar.description = item["description"]
-      @calendar.readable_time = time.strftime("%A, %d %b %Y %l:%M %p")
+      @calendar.readable_time = format_time(time)
       @calendar.location= item["location"]
       @calendar.save
     end
