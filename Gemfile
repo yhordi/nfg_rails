@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'factory_girl_rails'
 gem 'pry'
+gem 'webmock', group: :test
 gem 'pry-nav'
 group :development, :test do
   gem 'simplecov', :require => false
