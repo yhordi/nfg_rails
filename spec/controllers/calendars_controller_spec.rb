@@ -21,7 +21,6 @@ describe CalendarsController do
         expect(response.status).to eq(200)
     end
     xit "should create calendars in the database" do
-
     end
   end
 end
