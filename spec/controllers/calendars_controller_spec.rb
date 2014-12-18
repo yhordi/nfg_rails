@@ -1,8 +1,9 @@
 require 'rails_helper'
+require_relative 'mock_json'
 
 describe CalendarsController do
   let!(:user) { FactoryGirl.create :user }
-  let!(:attributes) { FactoryGirl.attributes_for :calendar }
+  let(:attributes) { FactoryGirl.attributes_for :calendar }
   context 'index' do
     it 'renders the index page' do
       get :index
@@ -11,16 +12,15 @@ describe CalendarsController do
   end
   context 'create' do
     let!(:calendar) { FactoryGirl.create :calendar }
-    before(:each) do
-      WebMock.disable_net_connect!
-      stub_request(:get, "https://www.googleapis.com/calendar/v3/calendars/nebulaforcego@gmail.com/events?key=#{ENV['GCAL_KEY']}")
-      WebMock.allow_net_connect!
-
-    end
     it "should get a 200 response from back google calendar" do
         expect(response.status).to eq(200)
     end
-    xit "should create calendars in the database" do
+    it "should create calendars in the database" do
+      response_double = double("response", body: $mock_json)
+      allow(HTTParty).to receive(:get).and_return(response_double)
+      event = $mock_hash["items"][0]
+      expect(Calendar).to receive(:new).with(summary: event["summary"], time: anything, description: event["description"], readable_time: anything, location: event["location"]).and_call_original
+      post :create
     end
   end
 end

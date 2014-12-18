@@ -12,12 +12,7 @@ class CalendarsController < ApplicationController
     @parse = JSON.parse(@response.body).as_json
     @parse["items"].each do |item|
       time = DateTime.iso8601(item["start"]["dateTime"])
-      @calendar = Calendar.new
-      @calendar.summary = item["summary"]
-      @calendar.time = time
-      @calendar.description = item["description"]
-      @calendar.readable_time = format_time(time)
-      @calendar.location= item["location"]
+      @calendar = Calendar.new(summary: item["summary"], time: time, description: item["description"], readable_time: format_time(time), location: item["location"])
       @calendar.save
     end
     redirect_to '/calendars'

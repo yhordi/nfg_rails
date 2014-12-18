@@ -18,8 +18,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'factory_girl_rails'
 gem 'pry'
-gem 'webmock', group: :test
 gem 'pry-nav'
+gem 'awesome_print'
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'rspec-rails', '~> 3.0.0.beta'
