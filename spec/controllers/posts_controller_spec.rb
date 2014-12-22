@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe PostsController  do
-    let!(:article) { FactoryGirl.create :post }
-    let!(:user) { FactoryGirl.create :user}
-    let!(:attributes) { FactoryGirl.attributes_for :post }
+  let!(:article) { FactoryGirl.create :post }
+  let!(:user) { FactoryGirl.create :user}
+  let!(:attributes) { FactoryGirl.attributes_for :post }
   describe 'GET #index' do
     it 'renders the index page' do
       get :index

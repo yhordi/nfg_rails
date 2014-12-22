@@ -10,7 +10,6 @@ class PostsController < ApplicationController
   def create
     post = Post.new(post_params)
     author = "#{session[:username].titleize} Force"
-    p post
     post.author = author
     post.save!
     redirect_to root_path
@@ -35,7 +34,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    p params
     params.require(:post).permit(:title, :body, :author, :created_at)
   end
 end
