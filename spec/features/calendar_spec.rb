@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe "Create Button" do
+describe "Calendar", js: true do
   let!(:user) { FactoryGirl.create :user }
-  context "a logged in user" do
+  context "with a logged in user" do
     before(:each) do
         visit new_session_path
         fill_in "Username", with: user.username
@@ -10,7 +10,15 @@ describe "Create Button" do
         click_on "Log In"
         visit calendars_path
     end
-    xit "should change the create button to the refresh button" do
+    it "should display a notice to the user" do
+      expect(page).to have_content("Add or make changes to events through google calendar.")
+    end
+    it "should display a create button" do
+      within("form#new_calendar") do
+        expect(page).to have_button("Create")
+      end
+    end
+    xit "should display a calendar event and a refresh button" do
 
     end
   end
