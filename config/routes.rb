@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :show]
   resources :posts
   resources :calendars, only: [:index, :create]
+  resources :videos, only: [:index, :show]
 end
