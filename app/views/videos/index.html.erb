@@ -1,5 +1,8 @@
+<div class="center headline">Videos</div>
 <%  @parse["items"].each do |item| %>
   <% if item["id"]["kind"] == "youtube#video" %>
-    <iframe src = <%= "http://youtube.com/embed/#{item["id"]["videoId"]}" %> ></iframe>
+  <div class="center">
+    <iframe class="video" src = <%= "http://youtube.com/embed/#{item["id"]["videoId"]}" %> ></iframe>
+  </div>
   <% end %>
 <% end %>
