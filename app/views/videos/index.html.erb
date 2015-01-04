@@ -1,8 +1,10 @@
-<div class="center headline">Videos</div>
-<%  @parse["items"].each do |item| %>
-  <% if item["id"]["kind"] == "youtube#video" %>
-  <div class="center">
-    <iframe class="video" src = <%= "http://youtube.com/embed/#{item["id"]["videoId"]}" %> ></iframe>
-  </div>
+<h1 class="center neb">Videos</h1>
+<% if session[:id] != nil %>
+  <%= form_for Video.new do |f| %>
+    <% if Video.first == nil %>
+      <%= f.submit "Create" %>
+    <% else %>
+      <%= f.submit "Refresh" %>
+    <% end %>
   <% end %>
 <% end %>
