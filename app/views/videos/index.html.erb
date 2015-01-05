@@ -1,7 +1,7 @@
 <h1 class="center neb">Videos</h1>
 <% @videos.each do |video| %>
   <div class="center">
-    <iframe class="video"src ="<%= "#{video.link}" %>"></iframe>
+    <iframe class="video"src="<%= "#{video.link}" %>"></iframe>
   </div>
 <% end %>
 <% if session[:id] != nil %>
