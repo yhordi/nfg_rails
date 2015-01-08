@@ -1,4 +1,4 @@
-require 'json'
+resporequire 'json'
 include TimeHelper
 
 class CalendarsController < ApplicationController
