@@ -16,9 +16,9 @@ describe CalendarsController do
         expect(response.status).to eq(200)
     end
     it "should create calendars in the database" do
-      response_double = double("response", body: $mock_json)
+      response_double = double("response", body: $mock_cal_json)
       allow(HTTParty).to receive(:get).and_return(response_double)
-      event = $mock_hash["items"][0]
+      event = $mock_cal["items"][0]
       expect(Calendar).to receive(:new).with(summary: event["summary"], time: anything, description: event["description"], readable_time: anything, location: event["location"]).and_call_original
       post :create
     end

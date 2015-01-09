@@ -14,4 +14,7 @@ FactoryGirl.define do
     time { Faker::Time.forward(23, :morning) }
     readable_time { Faker::Date.forward(23) }
   end
+  factory :video do
+    link { "//www.youtube.com/embed/_yOlihvcdLA" }
+  end
 end

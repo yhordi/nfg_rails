@@ -1,0 +1,16 @@
+<h1 class="center neb">Videos</h1>
+<%= @parse %>
+<% @videos.each do |video| %>
+  <div class="center">
+    <iframe class="video"src="<%= "#{video.link}" %>"></iframe>
+  </div>
+<% end %>
+<% if session[:id] != nil %>
+  <%= form_for Video.new do |f| %>
+    <% if Video.first == nil %>
+      <%= f.submit "Create" %>
+    <% else %>
+      <%= f.submit "Refresh" %>
+    <% end %>
+  <% end %>
+<% end %>
