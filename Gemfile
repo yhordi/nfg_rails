@@ -28,5 +28,5 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 end
-gem 'rails_12factor', group: :production
+# gem 'rails_12factor', group: :production
 
