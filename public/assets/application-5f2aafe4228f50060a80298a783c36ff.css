@@ -1,0 +1,313 @@
+@font-face {
+  font-family: 'Neb';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/hirukoextralight-webfont.ttf");
+}
+
+/* line 13, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+body {
+  background-color: black;
+  color: white;
+  font-family: "Verdana";
+}
+
+/* line 19, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+p {
+  font-family: Verdana;
+}
+
+/* line 22, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: text-shadow, .5s;
+}
+
+/* line 29, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+a:hover {
+  text-shadow: 0px 0px 9px white;
+  -webkit-transition: text-shadow, .5s;
+}
+
+/* line 34, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.stars {
+  height: 9.5em;
+  background-image: url("/assets/starryHeader.png");
+  background-size: 45%;
+  border-bottom: 1px solid white;
+  overflow: hidden;
+}
+
+/* line 41, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.divider {
+  border-bottom: 1px dashed white;
+}
+
+/* line 44, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.article {
+  font-size: 1.2em;
+}
+
+/* line 47, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.error {
+  color: red;
+}
+
+/* line 50, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.notice {
+  color: yellow;
+}
+
+/* line 54, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.nav {
+  min-width: 480px;
+  margin-bottom: 1em;
+}
+/* line 57, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.nav li {
+  display: inline;
+  margin: .25em;
+  border-bottom: 1px solid white;
+  -webkit-transition: border-bottom .1s;
+}
+/* line 62, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.nav li a {
+  padding: 2px 7px 2px 7px;
+}
+
+/* line 68, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.fancy {
+  color: #d6cfcf;
+  font-family: 'Neb';
+}
+
+/* line 73, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.nebTop {
+  top: -1.3em;
+  position: relative;
+  font-family: "Neb";
+  font-size: 5em;
+}
+
+/* line 79, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.neb {
+  font-family: "Neb";
+}
+
+/* line 82, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.headline {
+  font-size: 2em;
+}
+
+/* line 85, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.events {
+  list-style-type: none;
+}
+
+/* line 88, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.glow {
+  text-shadow: 0px 0px 50px white;
+}
+
+/* line 91, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.footer {
+  font-size: 10px;
+}
+
+/* line 94, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.inline {
+  display: inline;
+}
+
+/* line 97, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 101, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+form input, form textarea, form .byline {
+  display: block;
+  text-align: left;
+}
+
+/* line 106, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.video {
+  width: 40%;
+  height: 20em;
+}
+
+/* line 110, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.blog:hover {
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 2px solid #2837f0;
+}
+
+/* line 114, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.pics:hover {
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 2px solid #c85ffc;
+}
+
+/* line 118, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.music:hover {
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 2px solid red;
+}
+
+/* line 122, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.videos:hover {
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 2px solid darkorange;
+}
+
+/* line 126, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.shows:hover {
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 2px solid #fff200;
+}
+
+/* line 130, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.contact:hover {
+  -webkit-transition: border-bottom .5s;
+  border-bottom: 2px solid #3bff00;
+}
+
+/* line 134, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.left {
+  text-align: left;
+}
+
+/* line 137, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.right {
+  text-align: right;
+}
+
+/* line 140, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.admin {
+  background-color: #373748;
+}
+
+/* line 143, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.muted {
+  color: gray;
+}
+
+/*css for the lasers*/
+/* line 148, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.laser {
+  overflow: hidden;
+  height: 2px;
+  width: 25%;
+  margin: 1em;
+}
+
+/* line 154, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.redLaser {
+  background-color: red;
+  -webkit-animation-duration: 2.25s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px red;
+  -moz-box-shadow: 0px 0px 25px 2px red;
+  box-shadow: 0px 0px 25px 2px red;
+}
+
+/* line 165, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.blueLaser {
+  background-color: #2837f0;
+  -webkit-animation-duration: 1.75s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px #2837f0;
+  -moz-box-shadow: 0px 0px 25px 2px #2837f0;
+  box-shadow: 0px 0px 25px 2px #2837f0;
+}
+
+/* line 176, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.greenLaser {
+  background-color: #3bff00;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px #3bff00;
+  -moz-box-shadow: 0px 0px 25px 2px #3bff00;
+  box-shadow: 0px 0px 25px 2px #3bff00;
+}
+
+/* line 187, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.goldLaser {
+  background-color: #fff200;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px #fff200;
+  -moz-box-shadow: 0px 0px 25px 2px #fff200;
+  box-shadow: 0px 0px 25px 2px #fff200;
+}
+
+/* line 198, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.purpleLaser {
+  background-color: #c85ffc;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px #c85ffc;
+  -moz-box-shadow: 0px 0px 25px 2px #c85ffc;
+  box-shadow: 0px 0px 25px 2px #c85ffc;
+}
+
+/* line 209, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+.orangeLaser {
+  background-color: darkorange;
+  background-position-x: -30em;
+  -webkit-animation-duration: 2.1s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-box-shadow: 0px 0px 25px 2px darkorange;
+  -moz-box-shadow: 0px 0px 25px 2px darkorange;
+  box-shadow: 0px 0px 25px 2px darkorange;
+}
+
+@-webkit-keyframes slidein {
+  /* line 222, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+  0% {
+    -webkit-transform: translateX(-80em);
+  }
+
+  /* line 226, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+  100% {
+    -webkit-transform: translateX(100em);
+  }
+}
+
+@media (min-width: 375px) and (orientation: portrait) {
+  /* line 232, /Users/Jordan/Projects/indie/nfg_rails/app/assets/stylesheets/main.css.scss */
+  .nebTop {
+    font-size: 2.8em;
+    z-index: 1;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
