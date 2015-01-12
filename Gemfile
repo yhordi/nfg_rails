@@ -14,13 +14,16 @@ gem 'google-api-client'
 gem 'dotenv-rails'
 gem "omniauth-google-oauth2"
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'factory_girl_rails'
 gem 'pry'
 gem 'pry-nav'
 gem 'awesome_print'
+group :development do
+    gem 'rails_12factor'
+    gem 'spring'
+end
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'rspec-rails', '~> 3.0.0.beta'
