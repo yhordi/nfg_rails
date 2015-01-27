@@ -7,6 +7,7 @@ class VideosController < ApplicationController
   def create
     Video.delete_all
     @response = HTTParty.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUbmYMZyMPkoLUFRom02z-9w&key=#{ENV['GCAL_KEY']}")
+    p @response
     @parse = JSON.parse(@response.body)
     @parse["items"].each do |item|
       video_info = item["snippet"]["resourceId"]
