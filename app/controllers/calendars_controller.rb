@@ -8,9 +8,9 @@ class CalendarsController < ApplicationController
 
   def create
     Calendar.delete_all
-    @response = HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/nebulaforcego%40gmail.com/events?key=#{ENV['GCAL_KEY']}")
+    @response = HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/nebulaforcego%40gmail.com/events?key=#{ENV['GCAL_KEY']}", headers: {"X-Forwarded-For" => request.remote_ip})
     puts "*"*50
-    puts @response
+    p request.remote_ip
     @parse = JSON.parse(@response.body).as_json
     @parse["items"].each do |item|
       time = DateTime.iso8601(item["start"]["dateTime"])
