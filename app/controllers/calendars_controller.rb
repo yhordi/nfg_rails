@@ -12,6 +12,8 @@ class CalendarsController < ApplicationController
     # headers: {"X-Forwarded-For" => request.remote_ip}
     puts "*"*50
     p @response
+    puts "*"*50
+    p request
     p request.remote_ip
     @parse = JSON.parse(@response.body).as_json
     @parse["items"].each do |item|
@@ -21,7 +23,6 @@ class CalendarsController < ApplicationController
     end
     redirect_to '/calendars'
   end
-
   private
 
   def calendar_params
