@@ -6,7 +6,8 @@ class VideosController < ApplicationController
 
   def create
     Video.delete_all
-    @response = HTTParty.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUbmYMZyMPkoLUFRom02z-9w&key=#{ENV['GCAL_KEY']}")
+    RestClient.proxy = "http://quotaguard2292:dbe18e7f7d41@us-east-1-static-brooks.quotaguard.com:9293"
+    @response = RestClient.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUbmYMZyMPkoLUFRom02z-9w&key=#{ENV['GCAL_KEY']}")
     puts @response
     @parse = JSON.parse(@response.body)
     @parse["items"].each do |item|

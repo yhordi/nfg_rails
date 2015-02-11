@@ -17,7 +17,7 @@ describe VideosController do
     end
     it "should create video links in the database" do
       response_double = double("response", body: $mock_youtube_json)
-      allow(HTTParty).to receive(:get).and_return(response_double)
+      allow(RestClient).to receive(:get).and_return(response_double)
       video = $mock_youtube["items"][0]["snippet"]["resourceId"]["videoId"]
       expect(Video).to receive(:new).with({:link => "http://youtube.com/embed/#{video}"}).and_call_original
       post :create
