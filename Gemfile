@@ -21,6 +21,7 @@ gem 'factory_girl_rails'
 gem 'pry'
 gem 'pry-nav'
 gem 'awesome_print'
+gem 'rest-client'
 gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'simplecov', :require => false
