@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def new
-    p ENV['PASSWORD']
+    ENV['PASSWORD']
   end
 
   def show
