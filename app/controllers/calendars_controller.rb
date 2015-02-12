@@ -8,7 +8,8 @@ class CalendarsController < ApplicationController
 
   def create
     Calendar.delete_all
-    @response = HTTParty.get("https://www.googleapis.com/calendar/v3/calendars/nebulaforcego%40gmail.com/events?key=#{ENV['GCAL_KEY']}")
+    RestClient.proxy = "http://quotaguard2292:dbe18e7f7d41@us-east-1-static-brooks.quotaguard.com:9293"
+    @response = RestClient.get("https://www.googleapis.com/calendar/v3/calendars/nebulaforcego%40gmail.com/events?key=#{ENV['GCAL_KEY']}")
     @parse = JSON.parse(@response.body).as_json
     @parse["items"].each do |item|
       time = DateTime.iso8601(item["start"]["dateTime"])
@@ -17,7 +18,6 @@ class CalendarsController < ApplicationController
     end
     redirect_to '/calendars'
   end
-
   private
 
   def calendar_params
