@@ -5,8 +5,13 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       @user = User.find params[:id]
-      # render :json => @user
     end
+  end
+
+  def update
+    user = User.find(params[:id])
+    user.update_attributes
+    redirect_to users_show_path
   end
 
   private
