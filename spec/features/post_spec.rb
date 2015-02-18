@@ -5,7 +5,7 @@ describe "Post", js: true do
   let!(:post) { FactoryGirl.create :post }
   context "a logged in user" do
     before(:each) do
-      visit new_session_path
+      visit go_path
       fill_in "Username", with: user.username
       fill_in "Password", with: user.password
       click_on "Log In"
