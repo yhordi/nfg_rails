@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-    p "*"*50
   end
 
   def new

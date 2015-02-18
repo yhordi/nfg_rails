@@ -13,7 +13,6 @@ $gold: #fff200;
 body {
   background-color: black;
   color: white;
-  // font-family: "Neb";
   font-family: 'Verdana'
 }
 p {
@@ -64,7 +63,10 @@ a:hover{
     }
   }
 }
-
+.logo {
+  width: 9em;
+  margin-top: .1em;
+}
 .fancy {
   color: #d6cfcf;
   font-family: 'Neb';
