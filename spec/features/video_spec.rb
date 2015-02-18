@@ -4,7 +4,7 @@ describe 'Video with empty database', js: true do
   let!(:user) { FactoryGirl.create(:user) }
   context 'with a logged in user' do
     before(:each) do
-        visit new_session_path
+        visit go_path
         fill_in "Username", with: user.username
         fill_in "Password", with: user.password
         click_on "Log In"
@@ -21,7 +21,7 @@ describe 'Video with videos in the database', js: true do
   let(:attributes) { FactoryGirl.attributes_for :video }
   context 'A logged in user' do
     before(:each) do
-      visit new_session_path
+      visit go_path
       fill_in "Username", with: user.username
       fill_in "Password", with: user.password
       click_on "Log In"
