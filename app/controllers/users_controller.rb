@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def show
+    p session
     if session[:id] == nil
       redirect_to root_path
     else
