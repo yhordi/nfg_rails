@@ -5,6 +5,9 @@
   <label for="password_old">Old Password</label>
   <input type="password" name="old_password"></input>
   <%= f.label(:password, "New Password") %>
-  <%= f.text_field(:password) %>
+  <%= f.password_field(:password) %>
   <%= f.submit "Update", action: "update" %>
-  <% end %>
+<% end %>
+<p class="error">
+    <%= flash[:error] %>
+  </p>
