@@ -9,8 +9,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    p "*"*50
-    p params
     if @user.authenticate(params[:old_password]) == @user
       @user.password = params[:user][:password]
       @user.save!
