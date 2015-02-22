@@ -13,6 +13,7 @@ describe "User", js: true do
         visit user_path(user.id)
         fill_in "old_password", with: user.password
         fill_in "user_password", with: "newPassword"
+        fill_in "password_again", with: "newPassword"
         click_on "Update"
         expect(page).to have_content("Password updated")
       end
