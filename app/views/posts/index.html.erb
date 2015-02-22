@@ -4,7 +4,6 @@
 <% end %>
 </div>
 <% @posts.each do |post| %>
-  <div class="col left">
     <div class="headline neb">
       <%= link_to post.title, post_path(post.id)%>
     </div>
@@ -17,5 +16,4 @@
     <p class="footer divider muted">
       <%= format_time(post.created_at) %>
     </p>
-  </div>
 <% end %>
