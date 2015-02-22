@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include AuthHelper
 
   def show
     @user = User.find(params[:id])
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.authenticate(params[:old_password]) == @user && params[:user][:password] == params[:password_again]
+    if valid_credentials?(@user)
       @user.password = params[:user][:password]
       @user.save!
       flash[:notice] = "Password updated"
