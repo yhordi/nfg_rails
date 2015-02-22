@@ -99,7 +99,7 @@ a:hover{
 .center{
   text-align: center;
 }
-form{
+form {
   input, textarea, .byline{
     display: block;
     text-align: left;
@@ -113,36 +113,36 @@ form{
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid $sapphire;
 }
-.pics:hover{
+.pics:hover {
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid $amethyst;
 }
-.music:hover{
+.music:hover {
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid $ruby;
 }
-.videos:hover{
+.videos:hover {
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid $amber;
 }
-.shows:hover{
+.shows:hover {
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid $gold;
 }
-.contact:hover{
+.contact:hover {
   -webkit-transition: border-bottom .5s;
   border-bottom: 2px solid $emerald;
 }
-.left{
+.left {
   text-align: left;
 }
-.right{
+.right {
   text-align: right;
 }
-.admin{
+.admin {
   background-color: rgb(55, 55, 72);
 }
-.muted{
+.muted {
   color: gray;
 }
 /*css for the lasers*/
@@ -238,4 +238,9 @@ form{
   .nav{
     // font-size: 1em;
   }
+}
+/*responsive hack. HELP ME FIX THIS*/
+
+.span_2 {
+   border: 1px solid black;
 }
