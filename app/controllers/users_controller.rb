@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.authenticate(params[:old_password]) == @user
+    if @user.authenticate(params[:old_password]) == @user && params[:user][:password] == params[:password_again]
       @user.password = params[:user][:password]
       @user.save!
       flash[:notice] = "Password updated"
