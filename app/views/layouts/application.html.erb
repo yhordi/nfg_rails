@@ -8,11 +8,10 @@
 </head>
 
 <body>
-    <div class="container">
       <% if session[:id] != nil %>
         <%= render "sessions/show" %>
       <% end %>
-      <div class="stars row">
+      <div class="stars">
         <div class="laser redLaser"></div>
         <div class="laser blueLaser"></div>
         <div class="laser greenLaser"></div>
@@ -21,7 +20,7 @@
         <div class="laser purpleLaser"></div>
         <div class="nebTop center"><%= image_tag('logo.png', class: "logo") %></div>
       </div>
-      <ul class="nav row center">
+      <ul class="nav center">
         <li class="blog"> <a class="fancy" href="/">Blog</a> </li>
 <!--         <li class="pics"> <a class="fancy" href="">Pics</a> </li> -->
         <!-- <li class="music"> <a class="fancy" href="http://nebulaforcego.bandcamp.com/">Music</a> </li> -->
@@ -29,13 +28,10 @@
         <li class="shows"> <%= link_to "Upcoming Shows", calendars_path, class: "fancy" %> </li>
         <!-- <li class="contact"> <a class="fancy" href="">Contact</a> </li> -->
       </ul>
-      <div class="row">
-        <div class="col span_2"></div>
-        <div class="col span_8">
+    <div class="container">
+        <div>
           <%= yield %>
         </div>
-        <div class="col span_2"></div>
-      </div>
-  </div>
+    </div>
 </body>
 </html>
