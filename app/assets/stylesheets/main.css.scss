@@ -158,16 +158,6 @@ form {
   margin-top: 1em;
 }
 
-@-webkit-keyframes slidein {
-  0% {
-    -webkit-transform: translateX(-80em );
-  }
-
-  100% {
-     -webkit-transform: translateX(115em);
-  }
-}
-
 @media (min-width: 375px) and (orientation: portrait){
   .nebTop{
     font-size: 2.8em;
@@ -177,9 +167,3 @@ form {
     // font-size: 1em;
   }
 }
-
-/*responsive hack. HELP ME FIX THIS*/
-/*.span_2 {
-   border: 1px solid black;
-}
-*/
