@@ -34,7 +34,9 @@ describe UsersController do
       put :update, id: user.id, old_password: "blarnz", user: { password: pass }, password_again: pass
       expect(user.reload.password_digest).to eq(user.password_digest)
     end
-    xit "does not update a user's password it the new password fields do not match" do
+    it "does not update a user's password it the new password fields do not match" do
+      put :update, id: user.id, old_password: user.password, user: {password: "crabula"}, password_again: "crabuloid"
+      expect(user.reload.password_digest).to eq(user.password_digest)
     end
   end
 end
