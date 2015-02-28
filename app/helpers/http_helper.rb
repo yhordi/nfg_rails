@@ -7,3 +7,4 @@ module HttpHelper
     JSON.parse(RestClient.get("https://www.googleapis.com/calendar/v3/calendars/nebulaforcego%40gmail.com/events?key=#{ENV['GCAL_KEY']}").body).as_json
   end
 end
+

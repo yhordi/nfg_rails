@@ -1,5 +1,6 @@
+include AuthHelper
+include ErrorsHelper
 class UsersController < ApplicationController
-  include AuthHelper
 
   def show
     @user = User.find(params[:id])
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Password updated"
       redirect_to user_path
     else
-     redirect_to user_path, :flash => { :error => "Your new password was not saved." }
+     redirect_to user_path, :flash => { :error =>  unsaved_password}
     end
   end
 
