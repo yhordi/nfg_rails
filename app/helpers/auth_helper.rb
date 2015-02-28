@@ -18,7 +18,7 @@ module AuthHelper
   def validate_new_passwords(user)
     if new_passwords_match?
       user.password = params[:user][:password]
-      user.save!
+      user.update_attributes(user_params)
       flash[:notice] = "Password updated"
     else
       flash[:error] = unsaved_password(non_matching)
