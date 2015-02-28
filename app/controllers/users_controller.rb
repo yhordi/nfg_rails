@@ -11,13 +11,8 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-      validate_user(@user)
-      # @user.password = params[:user][:password]
-      # @user.save!
-      # flash[:notice] = "Password updated"
-      # redirect_to user_path
-
-     redirect_to user_path
+    validate_user(@user)
+    redirect_to user_path
   end
 
   private
