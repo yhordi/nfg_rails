@@ -17,7 +17,7 @@ describe "User", js: true do
         click_on "Update"
         expect(page).to have_content("Password updated")
       end
-      it "can't update their password with invalid credentials" do
+      it "is given an error message with bad credentials" do
         fill_in "old_password", with:
         "incorrect passyword"
         fill_in "user_password", with: "newPassword"
