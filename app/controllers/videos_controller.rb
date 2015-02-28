@@ -1,3 +1,4 @@
+include HttpHelper
 class VideosController < ApplicationController
 
   def index
@@ -6,10 +7,8 @@ class VideosController < ApplicationController
 
   def create
     Video.delete_all
-    RestClient.proxy = "http://quotaguard2292:dbe18e7f7d41@us-east-1-static-brooks.quotaguard.com:9293"
-    @response = RestClient.get("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUbmYMZyMPkoLUFRom02z-9w&key=#{ENV['GCAL_KEY']}")
-    @parse = JSON.parse(@response.body)
-    @parse["items"].each do |item|
+    quotaGuardProxy
+    parse_json["items"].each do |item|
       video_info = item["snippet"]["resourceId"]
       if video_info["kind"] == "youtube#video"
         Video.create(link: "http://youtube.com/embed/#{video_info["videoId"]}")
