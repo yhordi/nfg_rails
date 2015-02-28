@@ -4,18 +4,16 @@
 <% end %>
 </div>
 <% @posts.each do |post| %>
-  <div class="col left">
     <div class="headline neb">
       <%= link_to post.title, post_path(post.id)%>
     </div>
-    <div class="muted">
+    <div class="muted padBtm">
       by: <%= post.author.titleize %> Force
     </div>
     <p class="article">
       <%= post.body %>
     </p>
-    <p class="footer divider muted">
+    <p class="footer divider muted mBtm mTop">
       <%= format_time(post.created_at) %>
     </p>
-  </div>
 <% end %>

@@ -20,7 +20,7 @@
 /*	MAIN CONTAINER
 	Set the width to whatever you want the width of your site to be. */
 .container {
-	max-width: 100%;
+	max-width: 800px;
 	margin: 0 auto;
 }
 
@@ -39,8 +39,7 @@
 
 /* 	DEFAULT ROW STYLES
 	Set bottom padding according to preference */
-.row {
-  /*padding-bottom: 1%;*/
+.row { padding-bottom: 0em;
 }
 
 

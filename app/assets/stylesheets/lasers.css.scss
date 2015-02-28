@@ -1,0 +1,146 @@
+$ruby: #ff0000;
+$sapphire: #2837F0;
+$emerald: #3bff00;
+$amber: #ff8c00;
+$amethyst: #c85ffc;
+$gold: #fff200;
+
+@-webkit-keyframes slidein {
+  0% {
+    -webkit-transform: translateX(-80em );
+  }
+
+  100% {
+     -webkit-transform: translateX(115em);
+  }
+}
+
+@-moz-keyframes slidein {
+  0% {
+    -moz-transform: translateX(-80em );
+  }
+
+  100% {
+     -moz-transform: translateX(115em);
+  }
+}
+
+.laser{
+  overflow: hidden;
+  height: 2px;
+  width:25%;
+  margin: 1em;
+}
+.redLaser {
+  background-color: $ruby;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 2.25s;
+  -moz-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: 2.25s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2.25s;
+  -moz-box-shadow: 0px 0px 25px 2px rgba(255,0,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(255,0,0,1);
+}
+
+.blueLaser {
+  background-color: $sapphire;
+  -webkit-animation-duration: 1.75s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: 1.75s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1.75s;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(40,55,240,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(40,55,240,1);
+  box-shadow: 0px 0px 25px 2px rgba(40,55,240,1);
+}
+
+.greenLaser {
+  background-color: $emerald;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(59,255,0,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(59,255,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(59,255,0,1);
+}
+
+.goldLaser {
+  background-color: $gold;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: 2.5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2.5s;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(255,242,0,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(255,242,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(255,242,0,1);
+}
+
+.purpleLaser {
+  background-color: $amethyst;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: 1.5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1.5s;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(200,95,252,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(200,95,252,1);
+  box-shadow: 0px 0px 25px 2px rgba(200,95,252,1);
+}
+
+.orangeLaser {
+  background-color: $amber;
+  background-position-x: -30em;
+  -webkit-animation-duration: 2.1s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: slidein;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: 2.1s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2.1s;
+  -webkit-box-shadow: 0px 0px 25px 2px rgba(255,140,0,1);
+  -moz-box-shadow: 0px 0px 25px 2px rgba(255,140,0,1);
+  box-shadow: 0px 0px 25px 2px rgba(255,140,0,1);
+}
