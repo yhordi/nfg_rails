@@ -17,13 +17,23 @@ describe "User", js: true do
         click_on "Update"
         expect(page).to have_content("Password updated")
       end
-      it "is given an error message with bad credentials" do
-        fill_in "old_password", with:
-        "incorrect passyword"
-        fill_in "user_password", with: "newPassword"
-        fill_in "user_password", with: "newPassword"
-        click_on "Update"
-        expect(page).to have_content("Your new password was not saved.")
+      context "is given an error message when" do
+        it "bad credentials are entered" do
+          fill_in "old_password", with:
+          "incorrect passyword"
+          fill_in "user_password", with: "newPassword"
+          fill_in "password_again", with: "newPassword"
+          click_on "Update"
+          expect(page).to have_content("Your new password was not saved. You entered your original password incorrectly.")
+        end
+        it "passwords don't match" do
+          fill_in "old_password", with:
+          user.password
+          fill_in "user_password", with: "Crabulae"
+          fill_in "password_again", with: "Crabuloid"
+          click_on "Update"
+          expect(page).to have_content("Your new password was not saved. Your new passwords don't match.")
+        end
       end
     end
 end
