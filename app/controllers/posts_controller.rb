@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new(post_params)
-    author = "#{session[:username].titleize} Force"
+    author = "#{session[:username].titleize}"
     post.author = author
     post.save!
     redirect_to root_path
