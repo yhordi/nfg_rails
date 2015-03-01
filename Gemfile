@@ -25,6 +25,7 @@ gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'nyan-cat-formatter'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
