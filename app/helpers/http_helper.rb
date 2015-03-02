@@ -1,5 +1,5 @@
 module HttpHelper
-  def quotaGuardProxy
+  def quota_guard_proxy
     RestClient.proxy = "http://quotaguard2292:dbe18e7f7d41@us-east-1-static-brooks.quotaguard.com:9293"
   end
 

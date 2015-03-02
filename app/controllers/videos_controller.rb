@@ -7,7 +7,7 @@ class VideosController < ApplicationController
 
   def create
     Video.delete_all
-    quotaGuardProxy
+    quota_guard_proxy
     parse_json["items"].each do |item|
       video_info = item["snippet"]["resourceId"]
       if video_info["kind"] == "youtube#video"
