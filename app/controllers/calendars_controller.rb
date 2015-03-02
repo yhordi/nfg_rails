@@ -1,8 +1,7 @@
 require 'json'
-include TimeHelper
-include HttpHelper
-
 class CalendarsController < ApplicationController
+  include TimeHelper
+  include HttpHelper
   def index
     @calendars = Calendar.order(time: :asc)
   end

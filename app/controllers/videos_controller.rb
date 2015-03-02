@@ -1,5 +1,5 @@
-include HttpHelper
 class VideosController < ApplicationController
+  include HttpHelper
 
   def index
     @videos = Video.all
