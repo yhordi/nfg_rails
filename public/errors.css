@@ -1,13 +1,4 @@
-body {
-  color: white;
-}
 
-iframe{
-  position: fixed; 
-  z-index: -99; 
-  width: 100%; 
-  height: 100%; 
-}
 
 /*reset*/
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -57,4 +48,25 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/*end reset*/
+
+body {
+  color: white;
+}
+
+iframe{
+  position: fixed; 
+  z-index: -99; 
+  width: 100%; 
+  height: 100%; 
+}
+
+.dialog{
+  text-align: center;
+  padding-top: 20%;
+}
+h1{
+  font-size: 3em;
 }
