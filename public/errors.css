@@ -62,7 +62,10 @@ iframe{
   width: 100%; 
   height: 100%; 
 }
-
+.internalServerError{
+  background-color: black;
+  opacity: .5;
+}
 .dialog{
   text-align: center;
   padding-top: 20%;
