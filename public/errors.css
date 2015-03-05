@@ -53,12 +53,12 @@ table {
 /*end reset*/
 
 body {
-  color: white;
+  color: #ce3b3b;
 }
 
 iframe{
   position: fixed; 
-  z-index: -99; 
+  z-index: -1; 
   width: 100%; 
   height: 100%; 
 }
@@ -67,6 +67,7 @@ iframe{
   text-align: center;
   padding-top: 20%;
 }
-h1{
+.mainMessage{
   font-size: 3em;
+  padding: 0 3em 0 3em;
 }
