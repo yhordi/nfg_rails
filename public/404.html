@@ -10,9 +10,6 @@
 
 <body>
   <!-- This file lives in public/404.html -->
-  <!-- <iframe frameborder="0" 
-    src="https://www.youtube.com/embed/aysiMbgml5g?rel=0&controls=0&disablekb=1&fs=1&autohide=1&loop=1&autoplay=1&showinfo=0&modestbranding=1&playlist=aysiMbgml5g" allowfullscreen>
-  </iframe> -->
   <div id="player">
 
   </div>
@@ -38,7 +35,11 @@
           disablekb: "1",
           fs: "1",
           loop: "1",
+          showinfo: "0",
+          origin: 'nebulaforcego.herokuapp.com',
+          modestbranding: "1",
           playlist: 'aysiMbgml5g',
+
         },
         events: {
           'onReady': onPlayerReady,
