@@ -2,6 +2,8 @@
   Post Title: <%= f.text_field :title, placeholder: "title" %>
   Author: <%= session[:username].titleize + " Force"%>
   <br></br>
-  Post Body: <%= f.text_area :body, :cols => "60", :rows => "10", placeholder: "body" %>
+  Post Body: <%= f.text_area :body, :cols => "60", :rows => "10", placeholder: "body", :class => "tinymce" %>
   <%= f.submit "create" %>
 <% end %>
+<%= tinymce %>
+
