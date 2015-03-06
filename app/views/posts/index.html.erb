@@ -11,7 +11,7 @@
       by: <%= post.author.titleize %> Force
     </div>
     <p class="article">
-      <%= post.body %>
+      <%= post.body.html_safe %>
     </p>
     <p class="footer divider muted mBtm mTop">
       <%= format_time(post.created_at) %>
