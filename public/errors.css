@@ -66,11 +66,12 @@ iframe{
 }
 .internalServerError{
   background-color: black;
-  opacity: .5;
+  opacity:.8;
 }
 .dialog{
   text-align: center;
-  padding-top: 20%;
+  top: 14em;
+  position: relative;
 }
 .mainMessage{
   font-size: 3em;

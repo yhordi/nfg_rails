@@ -4,7 +4,7 @@
   <title>We're sorry, we're terrible. (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="errors.css">
-  <script type="text/javascript" src="silence.js"></script>
+  <script type="text/javascript" src="detect-mobile.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,6 @@
             fs: "1",
             loop: "1",
             showinfo: "0",
-            origin: 'nebulaforcego.herokuapp.com',
             modestbranding: "1",
             playlist: 'Q9pQQCaw31c',
           },
@@ -67,11 +66,11 @@
         player.stopVideo();
       }
     </script>
-  <div class="dialog internalServerError">
-    <div>
+    <div class="dialog internalServerError">
       <h1 class='mainMessage'>We're sorry, but we have failed you.</h1>
+      <p>
+        If you're seeing this error it means I am dead. That, or there is something wrong with our website's code, and there is literally nothing you can do but wait.
+      </p>
     </div>
-    <p>If you're seeing this error it means I am dead. That, or there is something wrong with our website's code, and there is literally nothing you can do but wait.</p>
-  </div>
 </body>
 </html>
