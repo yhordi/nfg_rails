@@ -14,7 +14,9 @@ describe "Post", js: true do
       visit root_path
       click_on "New Blog Post"
       fill_in "title", with: post.title
-      fill_in "body", with: post.body
+      within('iframe') do
+        fill_in "#post_body", with: post.body
+      end
       click_on "create"
       expect(page).to have_content(post.title)
     end
