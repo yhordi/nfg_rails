@@ -22,5 +22,5 @@
     <%= f.text_area :body, size: "60x12"%>
     <%= f.submit "Update", action: "update" %>
   <% end %>
+  <%= link_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
 <% end %>
-<%= link_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
