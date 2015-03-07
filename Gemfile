@@ -25,6 +25,7 @@ gem 'rest-client'
 gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'simplecov', :require => false
+  gem 'nyan-cat-formatter'
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'capybara'
   gem 'selenium-webdriver'

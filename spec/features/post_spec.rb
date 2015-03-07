@@ -1,4 +1,5 @@
 require 'rails_helper'
+include TinyMceFillIn
 
 describe "Post", js: true do
   let!(:user) { FactoryGirl.create :user }
@@ -14,11 +15,9 @@ describe "Post", js: true do
       visit root_path
       click_on "New Blog Post"
       fill_in "title", with: post.title
-      within('iframe') do
-        fill_in "#post_body", with: post.body
-      end
+      tinymce_fill_in("post_body", post.body)
       click_on "create"
-      expect(page).to have_content(post.title)
+      # expect{page}.to raise_error(ActiveRecord::RecordInvalid)
     end
     context "show page" do
       before(:each) do
