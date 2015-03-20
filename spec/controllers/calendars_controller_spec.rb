@@ -16,6 +16,7 @@ describe CalendarsController do
         expect(response.status).to eq(200)
     end
     it "should create calendars in the database" do
+      p cal
       response_double = double("response", body: $mock_cal_json)
       allow(RestClient).to receive(:get).and_return(response_double)
       event = $mock_cal["items"][0]
