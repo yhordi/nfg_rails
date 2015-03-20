@@ -26,6 +26,7 @@ group :development, :test do
   gem 'simplecov', :require => false
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'capybara'
+  gem 'nyan-cat-formatter'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
