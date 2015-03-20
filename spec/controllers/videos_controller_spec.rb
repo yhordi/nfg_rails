@@ -1,5 +1,4 @@
 require 'rails_helper'
-require_relative 'mock_json'
 
 describe VideosController do
   let!(:user) { FactoryGirl.create :user }
@@ -16,9 +15,9 @@ describe VideosController do
         expect(response.status).to eq(200)
     end
     it "should create video links in the database" do
-      response_double = double("response", body: $mock_youtube_json)
+      response_double = double("response", body: youtube_json)
       allow(RestClient).to receive(:get).and_return(response_double)
-      video = $mock_youtube["items"][0]["snippet"]["resourceId"]["videoId"]
+      video = youtube["items"][0]["snippet"]["resourceId"]["videoId"]
       expect(Video).to receive(:new).with({:link => "http://youtube.com/embed/#{video}"}).and_call_original
       post :create
     end
