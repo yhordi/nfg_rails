@@ -12,15 +12,17 @@
     <%= @post.created_at %>
   </p>
 <% else %>
-  <%= form_for @post, url: {action: "update"} do |f| %>
+  <%= form_for @post do |f| %>
     <%= f.label(:title, "Post Title") %>
     <%= f.text_field :title %>
     <div class="byline">
       by <%= session[:username].titleize%> Force
     </div>
     <%= f.label(:body, "Post Body") %>
-    <%= f.text_area :body, size: "60x12"%>
+    <%= f.text_area :body, size: "60x12", :class => "tinymce" %>
     <%= f.submit "Update", action: "update" %>
   <% end %>
+  <%= tinymce %>
+
 <% end %>
 <%= link_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
