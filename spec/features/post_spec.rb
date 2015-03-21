@@ -11,20 +11,20 @@ describe "Post", js: true do
       fill_in "Password", with: user.password
       click_on "Log In"
     end
-    it "creates a new post" do
+    it "has an iframe" do
       visit root_path
       click_on "New Blog Post"
-      fill_in "title", with: post.title
-      tinymce_fill_in("post_body", post.body)
-      click_on "create"
-      # expect{page}.to raise_error(ActiveRecord::RecordInvalid)
+      # fill_in "title", with: post.title
+      # tinymce_fill_in("post_body", post.body)
+      # click_on "create"
+      expect(page.has_css?('iframe')).to be(true)
     end
     context "show page" do
       before(:each) do
         visit root_path
         click_on "#{post.title}"
       end
-      it "Can edit that post." do
+      it "Can edit a post." do
         new_body = "this is the newest, fakest body."
         fill_in ("Post Body"), with: new_body
         click_on "Update"
