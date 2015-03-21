@@ -68,6 +68,11 @@ iframe{
   background-color: black;
   opacity:.8;
 }
+.rejected{
+  background:url('images/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .dialog{
   text-align: center;
   top: 14em;
