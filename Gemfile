@@ -29,7 +29,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'capybara'
   gem 'nyan-cat-formatter'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '2.45.0'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 end
