@@ -28,6 +28,7 @@ group :development, :test do
   gem 'nyan-cat-formatter'
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'capybara'
+  gem 'nyan-cat-formatter'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
