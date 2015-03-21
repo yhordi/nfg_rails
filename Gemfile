@@ -8,6 +8,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'tinymce-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'google-api-client'
 gem 'dotenv-rails'
@@ -24,10 +25,12 @@ gem 'rest-client'
 gem 'rails_12factor', group: :production
 group :development, :test do
   gem 'simplecov', :require => false
+  gem 'nyan-cat-formatter'
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'nyan-cat-formatter'
   gem 'capybara'
-  gem 'selenium-webdriver'
+  gem 'nyan-cat-formatter'
+  gem 'selenium-webdriver', '2.45.0'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 end

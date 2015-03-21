@@ -1,6 +1,4 @@
 require 'rails_helper'
-require_relative 'mock_json'
-
 describe CalendarsController do
   let!(:user) { FactoryGirl.create :user }
   let(:attributes) { FactoryGirl.attributes_for :calendar }
@@ -16,9 +14,9 @@ describe CalendarsController do
         expect(response.status).to eq(200)
     end
     it "should create calendars in the database" do
-      response_double = double("response", body: $mock_cal_json)
+      response_double = double("response", body: cal_json)
       allow(RestClient).to receive(:get).and_return(response_double)
-      event = $mock_cal["items"][0]
+      event = cal["items"][0]
       expect(Calendar).to receive(:new).with(summary: event["summary"], time: anything, description: event["description"], readable_time: anything, location: event["location"]).and_call_original
       post :create
     end
