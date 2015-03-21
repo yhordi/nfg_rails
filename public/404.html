@@ -8,68 +8,10 @@
 
 </head>
 
-<body>
+<body class="missing errorBody">
   <!-- This file lives in public/404.html -->
-  <div id="player">
 
-  </div>
-   <script>
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: 'aysiMbgml5g',
-        playerVars: {
-          rel: "0",
-          controls: "0",
-          disablekb: "1",
-          fs: "1",
-          loop: "1",
-          showinfo: "0",
-          origin: 'nebulaforcego.herokuapp.com',
-          modestbranding: "1",
-          playlist: 'aysiMbgml5g',
-
-        },
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-
-    // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-      event.target.mute()
-      event.target.playVideo();
-      event.target.setLoop(loopPlaylists= true)
-    }
-
-    // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
-    var done = false;
-    function onPlayerStateChange(event) {
-      if (event.data == YT.PlayerState.PLAYING && !done) {
-        player.playVideo
-        done = true;
-      }
-    }
-    function stopVideo() {
-      player.stopVideo();
-    }
-  </script>
-  <div class="dialog">
+  <div class="dialog backdrop">
     <div>
       <h1 class="mainMessage">You have effectively navigated outside the known universe.</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
