@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @title = "Nebula Force, Go!"
     @posts = Post.order('created_at desc')
   end
 
