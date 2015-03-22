@@ -8,8 +8,8 @@
   <p>
     <%= @post.body %>
   </p>
-  <p class="footer">
-    <%= @post.created_at %>
+  <p class="footer muted">
+    <%= format_time(@post.created_at) %>
   </p>
 <% else %>
   <%= form_for @post do |f| %>
