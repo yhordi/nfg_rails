@@ -2,8 +2,8 @@
   <h1>
     <%= @post.title %>
   </h1>
-  <h4>
-    By <%= @post.author %>
+  <h4 class="muted">
+    By <%= @post.author + ' Force'%> 
   </h4>
   <p>
     <%= @post.body %>
@@ -23,5 +23,5 @@
     <%= f.submit "Update", action: "update" %>
   <% end %>
   <%= tinymce %>
-<% end %>
 <%= link_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
+<% end %>
