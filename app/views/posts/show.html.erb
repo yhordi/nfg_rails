@@ -6,7 +6,7 @@
     By <%= @post.author + ' Force'%> 
   </h4>
   <p>
-    <%= @post.body %>
+    <%= @post.body.html_safe %>
   </p>
   <p class="footer muted">
     <%= format_time(@post.created_at) %>
