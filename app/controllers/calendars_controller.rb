@@ -1,15 +1,14 @@
 require 'json'
-include TimeHelper
-include HttpHelper
-
 class CalendarsController < ApplicationController
+  include TimeHelper
+  include HttpHelper
   def index
     @calendars = Calendar.order(time: :asc)
   end
 
   def create
     Calendar.delete_all
-    quotaGuardProxy
+    quota_guard_proxy
     parse_json["items"].each do |item|
       time = DateTime.iso8601(item["start"]["dateTime"])
       @calendar = Calendar.new(summary: item["summary"], time: time, description: item["description"], readable_time: format_time(time), location: item["location"])

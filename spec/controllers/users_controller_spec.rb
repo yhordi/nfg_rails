@@ -1,11 +1,12 @@
 require 'rails_helper'
 
 describe UsersController do
+  let!(:user) { FactoryGirl.create :user }
+  let!(:attrubutes) { FactoryGirl.attributes_for :user }
+  before do
+    session[:id] = 1
+  end
   describe "#show" do
-    let!(:user) {FactoryGirl.create :user}
-    before do
-      session[:id] = 1
-    end
     context "a valid user" do
       it "returns a 200" do
       get(:show, {id:  1})
@@ -20,6 +21,22 @@ describe UsersController do
       get(:show, {id:  1})
         expect(response.status).to eq(302)
       end
+    end
+  end
+  describe "PUT #update" do
+    let!(:pass) { "newPassword" }
+    let!(:old_salt) { user.password_digest }
+    it "updates a user's password with valid params" do
+      put :update, id: user.id, old_password: user.password, user: { password: pass }, password_again: pass
+      expect(user.reload.password_digest).to_not eq(old_salt)
+    end
+    it "does not update a user's password if the original password is incorrect" do
+      put :update, id: user.id, old_password: "blarnz", user: { password: pass }, password_again: pass
+      expect(user.reload.password_digest).to eq(user.password_digest)
+    end
+    it "does not update a user's password it the new password fields do not match" do
+      put :update, id: user.id, old_password: user.password, user: {password: "crabula"}, password_again: "crabuloid"
+      expect(user.reload.password_digest).to eq(user.password_digest)
     end
   end
 end

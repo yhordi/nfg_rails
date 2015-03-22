@@ -1,6 +1,6 @@
-include AuthHelper
-include ErrorsHelper
 class UsersController < ApplicationController
+  include AuthHelper
+  include ErrorsHelper
 
   def show
     @user = User.find(params[:id])
@@ -10,15 +10,9 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
-    if valid_credentials?(@user)
-      @user.password = params[:user][:password]
-      @user.save!
-      flash[:notice] = "Password updated"
-      redirect_to user_path
-    else
-     redirect_to user_path, :flash => { :error =>  unsaved_password}
-    end
+    user = User.find(params[:id])
+    validate_user(user)
+    redirect_to user_path
   end
 
   private
