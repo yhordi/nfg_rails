@@ -1,15 +1,16 @@
+<% @title = @post.title%>
 <% if session[:id] == nil %>
   <h1>
     <%= @post.title %>
   </h1>
-  <h4>
-    By <%= @post.author %>
+  <h4 class="muted">
+    By <%= @post.author + ' Force'%> 
   </h4>
   <p>
-    <%= @post.body %>
+    <%= @post.body.html_safe %>
   </p>
-  <p class="footer">
-    <%= @post.created_at %>
+  <p class="footer muted">
+    <%= format_time(@post.created_at) %>
   </p>
 <% else %>
   <%= form_for @post do |f| %>
@@ -20,8 +21,8 @@
     </div>
     <%= f.label(:body, "Post Body") %>
     <%= f.text_area :body, size: "60x12", :class => "tinymce" %>
-    <%= f.submit "Update", action: "update" %>
+    <%= f.submit %>
   <% end %>
   <%= tinymce %>
+<%= button_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
 <% end %>
-<%= link_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
