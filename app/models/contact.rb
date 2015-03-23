@@ -4,6 +4,7 @@ class Contact < MailForm::Base
   attribute :message
   attribute :nickname, :captcha => true
 
+  validates :message, :presence => true
   def headers
     {
       :subject => "Message from nebulaforcego.herokuapp.com",
