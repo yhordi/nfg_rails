@@ -22,6 +22,12 @@
           <%= image_tag('logo.png', class: "logo") %>
         </div>
       </div>
+      <% if flash[:success] %>
+      <p class="success">
+        <%= flash[:success] %>
+      </p>
+      <% end %>
+
       <ul class="nav center">
         <li class="blog"> <a class="fancy" href="/">Blog</a> </li>
 <!--         <li class="pics"> <a class="fancy" href="">Pics</a> </li> -->

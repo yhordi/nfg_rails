@@ -1,6 +1,5 @@
 class ContactsController < ApplicationController
 
-
   def new
     @mailer = Contact.new
   end
@@ -17,7 +16,6 @@ class ContactsController < ApplicationController
       :flash => {:success => "Your message has been sent!"}
     else
       flash[:error] = mailer.errors.full_messages
-      ap flash[:error]
       redirect_to new_contact_path
     end
 
