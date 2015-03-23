@@ -1,0 +1,10 @@
+hello
+<%= form_for @mailer do |f| %>
+  <%= f.label "Your name:" %>
+  <%= f.text_field :name %>
+  <%= f.label "Your email:" %>
+  <%= f.email_field :email %>
+  <%= f.label "Your message to us" %>
+  <%= f.text_area :message%>
+  <%= f.submit "send message" %>
+<% end %>

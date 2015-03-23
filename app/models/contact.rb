@@ -1,4 +1,4 @@
-class ContactForm < MailForm::Base
+class Contact < MailForm::Base
   attribute :name, :validate => true
   attribute :email, :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message
@@ -6,8 +6,8 @@ class ContactForm < MailForm::Base
 
   def headers
     {
-      :subject => "My Contact Form",
-      :to => "nebulaforcego@gmail.com",
+      :subject => "Message from nebulaforcego.herokuapp.com",
+      :to => "bandalism@gmail.com",
       :from => %("#{name}" <#{email}>)
     }
   end

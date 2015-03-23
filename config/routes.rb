@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :posts
   resources :calendars, only: [:index, :create]
   resources :videos, only: [:index, :create]
-  # get :mail, to: 'mail#send' 
-  resources :mail, only: [:create, :new]
-  get 'mail', to: 'mail#new'
+  resources :contacts, only: [:create, :new]
+  get 'contact-us', to: 'contacts#new'
 end
