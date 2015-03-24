@@ -15,7 +15,7 @@ describe Contact do
     end
   end
   describe '#headers' do
-    it "should have the name and email in the from field" do
+    it "should have the name and email in the :from field" do
     mailer = Contact.new(name: "Jordan", email: "jordan@email.com", message: "I'm so great.")
     expect(mailer.headers[:from]).to eq("\"Jordan\" <jordan@email.com>")
     end

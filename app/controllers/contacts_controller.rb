@@ -4,10 +4,6 @@ class ContactsController < ApplicationController
     @mailer = Contact.new
   end
 
-  def send_mail
-    mailer.contact
-  end
-
   def create
     mailer = Contact.new(contact_params)
     if mailer.valid?
