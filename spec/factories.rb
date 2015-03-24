@@ -17,4 +17,9 @@ FactoryGirl.define do
   factory :video do
     link { "//www.youtube.com/embed/_yOlihvcdLA" }
   end
+  factory :contact do
+    name { Faker::Name.name }
+    email { Faker::Internet.email }
+    message { Faker::Lorem.paragraph }
+  end
 end

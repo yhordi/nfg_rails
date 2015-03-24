@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :posts
   resources :calendars, only: [:index, :create]
   resources :videos, only: [:index, :create]
+  resources :contacts, only: [:create, :new]
+  get 'contact-us', to: 'contacts#new'
 end

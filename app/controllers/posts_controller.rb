@@ -12,8 +12,13 @@ class PostsController < ApplicationController
     post = Post.new(post_params)
     author = "#{session[:username].titleize}"
     post.author = author
-    post.save!
-    redirect_to root_path
+    if post.valid?
+      post.save!
+      redirect_to root_path
+    else
+      flash[:error]= post.errors.full_messages
+      redirect_to new_post_path
+    end
   end
 
   def show

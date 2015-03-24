@@ -23,12 +23,29 @@ describe PostsController  do
       expect(article.reload.title).to eq(article.title)
     end
   end
+  describe 'GET #new' do
+    before(:each) do
+      get :new
+    end
+    it "assigns the @post instance variable" do
+      expect(assigns(:post)).to be_a_new(Post)
+    end
+    it "renders the new post template" do
+      expect(response).to render_template(:new)
+    end
+  end
   describe 'POST #create' do
-    it 'creates a new blog post' do
+    before(:each) do
       @request.session[:username] = "captain wonderful"
+    end
+    it 'creates a new blog post' do
       expect{
         post :create, :post => attributes
       }.to change{ Post.count }.by(1)
+    end
+    it 'reloads the new post page on bad params' do
+      post :create, :post => {title: "title"}
+      expect(response).to redirect_to(new_post_path)
     end
   end
   describe 'DELETE #destroy' do

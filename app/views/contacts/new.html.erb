@@ -1,0 +1,23 @@
+<% if flash[:error] %>
+    <% flash[:error].each do |error| %>
+    <p class="error">
+      <%= error %>
+    </p>
+  <% end %>
+<% end %>
+<p>
+  Hey there. You can send us an email through this form, or you can get ahold of us on <a href="https://twitter.com/nebulaforcego">Twitter</a> or <a href="https://www.facebook.com/nebulaforcego">Facebook.</a>
+</p>
+
+<p>
+  If this is in regard to booking make sure you specify the band or venue you're with in your message.
+</p>
+<%= form_for @mailer do |f| %>
+  <%= f.label "Your name:" %>
+  <%= f.text_field :name %>
+  <%= f.label "Your email:" %>
+  <%= f.email_field :email %>
+  <%= f.label "Your message to us" %>
+  <%= f.text_area :message, size: "60x12" %>
+  <%= f.submit "send message", class: "submit" %>
+<% end %>
