@@ -8,6 +8,12 @@ FactoryGirl.define do
     body { Faker::Lorem.paragraph }
     author { Faker::Internet.user_name(8) }
   end
+  factory :comment do
+    name { Faker::Name.name }
+    body { Faker::Lorem.paragraph}
+    commentable_type { "Post" }
+    commentable_id { 1 }
+  end
   factory :calendar do
     summary { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }
