@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141231192327) do
+ActiveRecord::Schema.define(version: 20150324193438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20141231192327) do
     t.string "location"
     t.string "maplink"
     t.string "readable_time"
+  end
+
+  create_table "comments", force: true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", force: true do |t|
