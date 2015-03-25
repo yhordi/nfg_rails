@@ -1,4 +1,3 @@
-<div class="comments">
 <% @post.comments.each do |comment| %>
   <h4 class="muted"> 
     By <%= comment.name %>
@@ -9,6 +8,5 @@
   <p class="footer muted">
     <%= format_time(comment.created_at) %>
   </p>
-</div>
 <% end %>
 
