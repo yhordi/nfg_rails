@@ -26,3 +26,4 @@
   <%= tinymce %>
 <%= button_to("Delete Post", post_path, method: :delete, data: { confirm: "Are you sure?" }) %>
 <% end %>
+<%= render 'comments/comment' %>
