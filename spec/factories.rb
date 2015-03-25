@@ -11,8 +11,7 @@ FactoryGirl.define do
   factory :comment do
     name { Faker::Name.name }
     body { Faker::Lorem.paragraph}
-    commentable_type { "Post" }
-    commentable_id { 1 }
+    post_id { 1 }
   end
   factory :calendar do
     summary { Faker::Lorem.sentence }

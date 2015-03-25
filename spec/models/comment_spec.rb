@@ -12,7 +12,7 @@ describe Comment do
       expect(article.comments.first).to eq(comment)
     end
     it "returns an associated post" do
-      expect(Comment.first.commentable).to eq(article)
+      expect(Comment.first.post).to eq(article)
     end
   end
 end

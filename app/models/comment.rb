@@ -1,4 +1,4 @@
 class Comment < ActiveRecord::Base
-  belongs_to :commentable, :polymorphic => true
+  belongs_to :post
   validates :name, :body, :presence => true
 end
