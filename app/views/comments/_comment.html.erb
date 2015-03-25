@@ -9,4 +9,11 @@
     <%= format_time(comment.created_at) %>
   </p>
 <% end %>
+<% if flash[:error] %>
+    <% flash[:error].each do |error| %>
+    <p class="error">
+      <%= error %>
+    </p>
+  <% end %>
+<% end %>
 

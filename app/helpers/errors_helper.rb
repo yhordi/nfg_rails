@@ -10,4 +10,8 @@ module ErrorsHelper
   def non_matching
     "Your new passwords don't match."
   end
+
+  def show_errors(model)
+    flash[:error] = model.errors.full_messages
+  end
 end
