@@ -8,7 +8,9 @@
   <p class="footer muted">
     <%= format_time(comment.created_at) %>
   </p>
-<%= button_to("Delete comment", post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: "Are you sure?" }) %>
+<% if session[:id] != nil %>
+  <%= button_to("Delete comment", post_comment_path(comment.post_id, comment.id), method: :delete, data: { confirm: "Are you sure?" }) %>
+<% end %>
 <% end %>
 <% if flash[:error] %>
     <% flash[:error].each do |error| %>
