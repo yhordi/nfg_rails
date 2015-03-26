@@ -4,6 +4,7 @@ describe Comment do
   context "validations" do
     it { should validate_presence_of :name }
     it { should validate_presence_of :body }
+    it { should validate_presence_of :post_id}
   end
   describe "associations" do
     let!(:article) {FactoryGirl.create :post}

@@ -1,10 +1,6 @@
 class CommentsController < ApplicationController
   include ErrorsHelper
 
-  def new
-    @comment = Comment.new
-  end
-
   def create
     comment = Comment.new(comment_params)
     comment.post_id = params[:post_id]
