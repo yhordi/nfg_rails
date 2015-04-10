@@ -10,12 +10,12 @@
   font-weight: 400;
   src: url(font_path('hirukoregular-webfont.ttf'));
 }
-$ruby: #ff0000;
-$sapphire: #2837F0;
+$ruby: #ff2f2f;
+$sapphire: #008aff;
 $emerald: #3bff00;
 $amber: #ff8c00;
-$amethyst: #c85ffc;
-$gold: #fff200;
+$amethyst: #e400ff;
+$gold: #ffea00;
 $muted: #666666;
 
 body {
@@ -25,20 +25,23 @@ body {
 input{
   color: black;
 }
+li{
+}
 p {
   line-height: 1.4;
 }
+
 a {
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  -webkit-transition: text-shadow, .5s;
+  // color: white;
+  // font-weight: bold;
+  // -webkit-transition: text-shadow, .5s;
 }
 
-a:hover{
-  text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
-  -webkit-transition: text-shadow, .5s;
-}
+// a:hover{
+//   text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
+//   -webkit-transition: text-shadow, .5s;
+// }
 .success{
   color: $emerald;
 }
@@ -64,27 +67,68 @@ a:hover{
 .notice{
   color: yellow;
 }
-
-.nav {
-  min-width: 480px;
-  margin-bottom: 1em;
-  li {
-    display: inline;
-    margin: .25em;
-    border-bottom: 1px solid white;
-    -webkit-transition: border-bottom .1s;
-    a{
-      padding: 2px 7px 2px 7px;
-    }
-  }
+.nav{
+  font-family: 'Headline', 'Arial', sans-serif;
 }
+.navItem {
+  list-style-type: none;
+  display: inline;
+}
+.news {
+  color: #999999;
+  border: 1px solid $muted;
+}
+.news:hover{
+  color: white;
+  -webkit-transition: color .5s, border-color .5s;
+  border-color: $amethyst;
+}
+.media{
+  color: #999999;
+  border: 1px solid $muted;
+}
+.media:hover {
+  color: white;
+  border-color: $ruby;
+  -webkit-transition: color .5s, border-color .5s;
+}
+.calendar{
+  color: #999999;
+  border: 1px solid $muted;
+}
+.calendar:hover {
+ color: white;
+ border-color: $gold;
+ -webkit-transition: color .5s, border-color .5s;
+}
+.contact{
+  color: #999999;
+  border: 1px solid $muted;
+}
+.contact:hover {
+  color: white;
+  border-color: $sapphire;
+  -webkit-transition: color .5s, border-color .5s;
+}
+// .navItem:hover {
+//   color: white;
+// }
+// .nav {
+//   min-width: 480px;
+//   margin-bottom: 1em;
+//   li {
+//     display: inline;
+//     margin: .25em;
+//     border: 1px solid $muted;
+//     -webkit-transition: border .1s;
+//     a{
+//       padding: 4px 7px 4px 7px;
+//     }
+//   }
+// }
 .logo {
   width: 9em;
   margin-top: .1em;
-}
-.fancy {
-  color: #d6cfcf;
-  font-family: 'Neb', 'Arial', sans-serif;
 }
 
 .nebTop{
@@ -134,30 +178,7 @@ form {
   width: 78%;
   height: 24em;
 }
-.blog:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $sapphire;
-}
-.pics:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $amethyst;
-}
-.music:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $ruby;
-}
-.videos:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $amber;
-}
-.shows:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $gold;
-}
-.contact:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $emerald;
-}
+
 .left {
   text-align: left;
 }
