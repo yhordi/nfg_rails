@@ -16,6 +16,7 @@ $emerald: #3bff00;
 $amber: #ff8c00;
 $amethyst: #c85ffc;
 $gold: #fff200;
+$muted: #666;
 
 body {
   background-color: black;
@@ -124,6 +125,9 @@ form {
     text-align: left;
   }
 }
+.byline{
+  font-size: 1em
+}
 #post_body{
   color: black;
 }
@@ -165,7 +169,8 @@ form {
   background-color: rgb(55, 55, 72);
 }
 .muted {
-  color: gray;
+  color: $muted;
+  font-family: "Neb";
 }
 
 .padBtm{
