@@ -16,18 +16,17 @@ $emerald: #3bff00;
 $amber: #ff8c00;
 $amethyst: #c85ffc;
 $gold: #fff200;
-$muted: #666;
+$muted: #666666;
 
 body {
   background-color: black;
-  color: white;
-  font-family: 'Verdana'
+  color: #cccccc;
 }
 input{
   color: black;
 }
 p {
-  font-family: Verdana;
+  line-height: 1.4;
 }
 a {
   text-decoration: none;
@@ -51,7 +50,7 @@ a:hover{
   overflow: hidden;
 }
 .divider{
-  border-bottom: 1px dashed white;
+  border-bottom: 1px solid #444444;
 }
 .article{
   font-size: 1.2em;
@@ -85,20 +84,20 @@ a:hover{
 }
 .fancy {
   color: #d6cfcf;
-  font-family: 'Neb';
+  font-family: 'Neb', 'Arial', sans-serif;
 }
 
 .nebTop{
   top: -1.3em;
   position: relative;
-  font-family: "Neb";
+  font-family: "Neb", 'Arial', sans-serif;
   font-size: 5em;
 }
 .neb{
-  font-family: "Neb";
+  font-family: "Neb", 'Arial', sans-serif;
 }
 .headline{
-  font-family: 'Headline';
+  font-family: 'Headline', 'Arial', sans-serif;
   font-size: 1.5em;
 }
 .events{
@@ -178,11 +177,14 @@ form {
 }
 
 .mBtm{
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
 .mTop{
   margin-top: 1em;
+}
+.timestamp{
+  margin-bottom: 2em;
 }
 
 

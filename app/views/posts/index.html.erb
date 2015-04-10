@@ -13,7 +13,9 @@
     <p class="article">
       <%= post.body.html_safe %>
     </p>
-    <p class="footer divider muted mBtm mTop">
-      <%= format_time(post.created_at) %>
-    </p>
+    <div class="footer divider muted mBtm mTop padTop">
+      <p class="timestamp">
+        <%= format_time(post.created_at) %>
+      </p>
+    </div>
 <% end %>
