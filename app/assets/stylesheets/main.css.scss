@@ -4,6 +4,12 @@
   font-weight: 400;
   src: url(font_path('hirukoextralight-webfont.ttf'));
 }
+@font-face {
+  font-family: 'Headline';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font_path('hirukoregular-webfont.ttf'));
+}
 $ruby: #ff0000;
 $sapphire: #2837F0;
 $emerald: #3bff00;
@@ -91,7 +97,8 @@ a:hover{
   font-family: "Neb";
 }
 .headline{
-  font-size: 2em;
+  font-family: 'Headline';
+  font-size: 1.5em;
 }
 .events{
   list-style-type: none;
