@@ -25,23 +25,21 @@ body {
 input{
   color: black;
 }
-li{
-}
 p {
   line-height: 1.4;
 }
 
 a {
   text-decoration: none;
-  // color: white;
+  color: white;
   // font-weight: bold;
-  // -webkit-transition: text-shadow, .5s;
+  -webkit-transition: text-shadow, .5s;
 }
 
-// a:hover{
-//   text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
-//   -webkit-transition: text-shadow, .5s;
-// }
+a:hover{
+  text-shadow: 0px 0px 9px rgba(255, 255, 255, 1);
+  -webkit-transition: text-shadow, .5s;
+}
 .success{
   color: $emerald;
 }
@@ -76,7 +74,7 @@ a {
 }
 .news {
   color: #999999;
-  border: 1px solid $muted;
+  border-bottom: 1px solid $muted;
 }
 .news:hover{
   color: white;
@@ -85,7 +83,7 @@ a {
 }
 .media{
   color: #999999;
-  border: 1px solid $muted;
+  border-bottom: 1px solid $muted;
 }
 .media:hover {
   color: white;
@@ -94,7 +92,7 @@ a {
 }
 .calendar{
   color: #999999;
-  border: 1px solid $muted;
+  border-bottom: 1px solid $muted;
 }
 .calendar:hover {
  color: white;
@@ -103,11 +101,12 @@ a {
 }
 .contact{
   color: #999999;
-  border: 1px solid $muted;
+  border-bottom: 1px solid $muted;
 }
 .contact:hover {
   color: white;
   border-color: $sapphire;
+  text-shadow: $sapphire;
   -webkit-transition: color .5s, border-color .5s;
 }
 // .navItem:hover {
