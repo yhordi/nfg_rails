@@ -8,7 +8,6 @@ describe "Calendar with empty database", js: true do
         fill_in "Username", with: user.username
         fill_in "Password", with: user.password
         click_on "Log In"
-        expect(page).to have_content('logout')
         visit calendars_path
     end
     it "should display a notice to the user" do
@@ -32,7 +31,6 @@ describe "Calendar with items in database", js: true do
         fill_in "Username", with: user.username
         fill_in "Password", with: user.password
         click_on "Log In"
-        expect(page).to have_content('logout')
         visit calendars_path
     end
     it "should display a calendar event" do
