@@ -10,6 +10,7 @@
   font-weight: 400;
   src: url(font_path('hirukoregular-webfont.ttf'));
 }
+
 $ruby: #ff2f2f;
 $sapphire: #008aff;
 $emerald: #3bff00;
@@ -109,22 +110,7 @@ a:hover{
   text-shadow: $sapphire;
   -webkit-transition: color .5s, border-color .5s;
 }
-// .navItem:hover {
-//   color: white;
-// }
-// .nav {
-//   min-width: 480px;
-//   margin-bottom: 1em;
-//   li {
-//     display: inline;
-//     margin: .25em;
-//     border: 1px solid $muted;
-//     -webkit-transition: border .1s;
-//     a{
-//       padding: 4px 7px 4px 7px;
-//     }
-//   }
-// }
+
 .logo {
   width: 9em;
   margin-top: .1em;
