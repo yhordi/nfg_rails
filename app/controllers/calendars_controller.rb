@@ -3,6 +3,7 @@ class CalendarsController < ApplicationController
   include TimeHelper
   include HttpHelper
   def index
+    @calendar = Calendar.new
     @calendars = Calendar.order(time: :asc)
   end
 
