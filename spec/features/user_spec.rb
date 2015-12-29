@@ -4,10 +4,7 @@ describe "User", js: true do
   let(:user) { FactoryGirl.create :user }
     context "a logged in user on their profile page" do
       before(:each) do
-        visit go_path
-        fill_in "Username", with: user.username
-        fill_in "Password", with: user.password
-        click_on "Log In"
+      page.set_rack_session(user_id: user.id, username: user.username, id: user.id)
         visit user_path(user.id)
       end
       it "can update their own password" do
