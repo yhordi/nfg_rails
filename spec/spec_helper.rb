@@ -1,5 +1,7 @@
 require 'simplecov'
-SimpleCov.start
+require "rack_session_access/capybara"
+
+SimpleCov.start 'rails'
 
 
 RSpec.configure do |config|
