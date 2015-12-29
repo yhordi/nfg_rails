@@ -22,7 +22,7 @@
 </div>
 <% if session[:id] != nil %>
   <p class="notice">Add or make changes to events through google calendar.</p>
-  <%= form_for Calendar.new do |f| %>
+  <%= form_for @calendar do |f| %>
     <% if Calendar.first == nil %>
       <%= f.submit "Create" %>
     <% else %>

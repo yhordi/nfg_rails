@@ -4,7 +4,7 @@ describe "Calendar with empty database", js: true do
   let!(:user) { FactoryGirl.create :user }
   context "with a logged in user" do
     before(:each) do
-      page.set_rack_session(user_id: user.id)
+      page.set_rack_session(user_id: user.id, username: user.username)
       visit calendars_path
     end
     it "should display a notice to the user" do
