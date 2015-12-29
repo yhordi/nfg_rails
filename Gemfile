@@ -24,6 +24,7 @@ gem 'pry-nav'
 gem 'awesome_print'
 gem 'rest-client'
 gem 'rails_12factor', group: :production
+gem 'rack_session_access', group: :test
 group :development, :test do
   gem 'simplecov', :require => false
   gem 'rspec-rails', '~> 3.0.0.beta'

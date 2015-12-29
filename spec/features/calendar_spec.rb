@@ -4,11 +4,8 @@ describe "Calendar with empty database", js: true do
   let!(:user) { FactoryGirl.create :user }
   context "with a logged in user" do
     before(:each) do
-        visit go_path
-        fill_in "Username", with: user.username
-        fill_in "Password", with: user.password
-        click_on "Log In"
-        visit calendars_path
+      page.set_rack_session(user_id: user.id)
+      visit calendars_path
     end
     it "should display a notice to the user" do
       expect(page).to have_content("Add or make changes to events through google calendar.")

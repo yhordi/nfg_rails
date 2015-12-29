@@ -17,7 +17,7 @@
     <%= f.label(:title, "Post Title") %>
     <%= f.text_field :title %>
     <div class="byline">
-      by <%= session[:username].titleize%> Force
+      by <%= session[:username].titleize %> Force
     </div>
     <%= f.label(:body, "Post Body") %>
     <%= f.text_area :body, size: "60x12", :class => "tinymce" %>
