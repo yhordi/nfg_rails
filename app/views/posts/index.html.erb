@@ -4,18 +4,26 @@
 <% end %>
 </div>
 <% @posts.each do |post| %>
-    <div class="headline neb">
-      <%= link_to post.title, post_path(post.id)%>
+    <div class='row'>
+      <div class="headline neb col">
+        <%= link_to post.title, post_path(post.id)%>
+      </div>
     </div>
-    <div class="muted padBtm byline">
-      by: <%= post.author.titleize %> Force
+    <div class='row'>
+      <div class="muted padBtm byline col">
+        by: <%= post.author.titleize %> Force
+      </div>
     </div>
-    <p class="article">
-      <%= post.body.html_safe %>
-    </p>
-    <div class="footer divider muted mBtm mTop padTop">
-      <p class="timestamp">
-        <%= format_time(post.created_at) %>
-      </p>
-    </div>
+      <div class='row'>
+        <div class='col'>
+          <p class="article">
+            <%= post.body.html_safe %>
+          </p>
+        </div>
+      </div>
+      <div class="footer divider muted mBtm mTop padTop row">
+        <p class="timestamp">
+          <%= format_time(post.created_at) %>
+        </p>
+      </div>
 <% end %>
