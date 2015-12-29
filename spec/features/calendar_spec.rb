@@ -23,11 +23,8 @@ describe "Calendar with items in database", js: true do
   let(:attributes) { FactoryGirl.attributes_for :calendar }
   context "with a logged in user" do
     before(:each) do
-        visit go_path
-        fill_in "Username", with: user.username
-        fill_in "Password", with: user.password
-        click_on "Log In"
-        visit calendars_path
+      page.set_rack_session(user_id: user.id, username: user.username, id: user.id)
+      visit calendars_path
     end
     it "should display a calendar event" do
       expect(page).to have_content(calendar.summary)
