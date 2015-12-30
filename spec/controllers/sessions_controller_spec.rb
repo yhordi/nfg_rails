@@ -8,18 +8,25 @@ describe SessionsController  do
         post :create, {:username => user.username, :password => user.password}
         expect(response.body).to include("redirect")
       end
-      it 'responds with a 302' do
+      it 'redirects to the site root' do
         post :create, {:username => user.username, :password => user.password}
-        expect(response.status).to eq(302)
+        expect(response).to redirect_to root_path
       end
     end
     context 'on no params' do
+      before(:each) do
+        post :create
+      end
       it "does not create a new session" do
-        expect(response.body).to eq("")
+        expect(session[:id]).to be_nil
+      end
+      it 'redirects to the login page' do
+        expect(response).to redirect_to go_path
       end
     end
   end
   describe '#destroy' do
+
     it 'sets the session id to nil' do
       session[:id] = user.id
       delete :destroy, id: user.id
