@@ -8,7 +8,6 @@ class CalendarsController < ApplicationController
   end
 
   def create
-    p
     Calendar.delete_all
     quota_guard_proxy
     parse_json["items"].each do |item|
