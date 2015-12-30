@@ -8,6 +8,7 @@ class CalendarsController < ApplicationController
   end
 
   def create
+    p
     Calendar.delete_all
     quota_guard_proxy
     parse_json["items"].each do |item|
@@ -17,9 +18,5 @@ class CalendarsController < ApplicationController
     end
     redirect_to '/calendars'
   end
-  private
 
-  def calendar_params
-    params.require(:calendar).permit(:summary, :time, :description, :location, :maplink)
-  end
 end
