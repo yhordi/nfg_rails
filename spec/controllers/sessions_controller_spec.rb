@@ -8,6 +8,10 @@ describe SessionsController  do
         post :create, {:username => user.username, :password => user.password}
         expect(response.body).to include("redirect")
       end
+      it 'responds with a 302' do
+        post :create, {:username => user.username, :password => user.password}
+        expect(response.status).to eq(302)
+      end
     end
     context 'on no params' do
       it "does not create a new session" do
