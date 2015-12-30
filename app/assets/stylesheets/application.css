@@ -11,7 +11,7 @@
  * file per style scope.
  *
  *= require ../../../vendor/assets/stylesheets/normalize
- *= require ../../../vendor/assets/stylesheets/responsive.gs.12col
+ *= require ../../../vendor/assets/stylesheets/trg
  *= require_tree .
  *= require_self
  */
