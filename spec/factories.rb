@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :user do
     username { Faker::Internet.user_name(8) }
-    password ENV['PASSWORD']
+    password { Faker::Internet.password}
   end
   factory :post do
     title { Faker::Lorem.sentence }
