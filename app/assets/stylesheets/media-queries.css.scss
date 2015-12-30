@@ -1,6 +1,10 @@
-@media (min-width: 375px) and (orientation: portrait){
+@media only screen 
+  and (min-width: 375px) 
+  and (orientation: portrait)
+  and (max-device-width : 667px)
+{
   .nebTop{
-    font-size: 4em;
+    font-size: 4.5em;
   }
   .stars{
     height: 5em;
@@ -13,5 +17,14 @@
   }
   .laser{
     margin: 10px;
+  }
+  .article{
+    font-size: 4em;
+  }
+  .headline{
+    font-size: 4em;
+  }
+  .byline{
+    font-size: 3em;
   }
 }
