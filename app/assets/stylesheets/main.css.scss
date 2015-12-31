@@ -4,28 +4,36 @@
   font-weight: 400;
   src: url(font_path('hirukoextralight-webfont.ttf'));
 }
-$ruby: #ff0000;
-$sapphire: #2837F0;
+@font-face {
+  font-family: 'Headline';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font_path('hirukoregular-webfont.ttf'));
+}
+
+$ruby: #ff2f2f;
+$sapphire: #008aff;
 $emerald: #3bff00;
 $amber: #ff8c00;
-$amethyst: #c85ffc;
-$gold: #fff200;
+$amethyst: #e400ff;
+$gold: #ffea00;
+$muted: #666666;
 
 body {
   background-color: black;
-  color: white;
-  font-family: 'Verdana'
+  color: #cccccc;
 }
 input{
   color: black;
 }
 p {
-  font-family: Verdana;
+  line-height: 1.4;
 }
+
 a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  // font-weight: bold;
   -webkit-transition: text-shadow, .5s;
 }
 
@@ -44,7 +52,7 @@ a:hover{
   overflow: hidden;
 }
 .divider{
-  border-bottom: 1px dashed white;
+  border-bottom: 1px solid #444444;
 }
 .article{
   font-size: 1.2em;
@@ -58,40 +66,69 @@ a:hover{
 .notice{
   color: yellow;
 }
-
-.nav {
-  min-width: 480px;
-  margin-bottom: 1em;
-  li {
-    display: inline;
-    margin: .25em;
-    border-bottom: 1px solid white;
-    -webkit-transition: border-bottom .1s;
-    a{
-      padding: 2px 7px 2px 7px;
-    }
-  }
+.nav{
+  font-family: 'Headline', 'Arial', sans-serif;
 }
+.navItem {
+  list-style-type: none;
+  display: inline;
+  padding: 1em;
+}
+.news {
+  color: #999999;
+  border-bottom: 1px solid $muted;
+}
+.news:hover{
+  color: white;
+  -webkit-transition: color .5s, border-color .5s;
+  border-color: $amethyst;
+}
+.media{
+  color: #999999;
+  border-bottom: 1px solid $muted;
+}
+.media:hover {
+  color: white;
+  border-color: $ruby;
+  -webkit-transition: color .5s, border-color .5s;
+}
+.calendar{
+  color: #999999;
+  border-bottom: 1px solid $muted;
+}
+.calendar:hover {
+ color: white;
+ border-color: $gold;
+ -webkit-transition: color .5s, border-color .5s;
+}
+.contact{
+  color: #999999;
+  border-bottom: 1px solid $muted;
+}
+.contact:hover {
+  color: white;
+  border-color: $sapphire;
+  text-shadow: $sapphire;
+  -webkit-transition: color .5s, border-color .5s;
+}
+
 .logo {
   width: 9em;
   margin-top: .1em;
-}
-.fancy {
-  color: #d6cfcf;
-  font-family: 'Neb';
 }
 
 .nebTop{
   top: -1.3em;
   position: relative;
-  font-family: "Neb";
+  font-family: "Neb", 'Arial', sans-serif;
   font-size: 5em;
 }
 .neb{
-  font-family: "Neb";
+  font-family: "Neb", 'Arial', sans-serif;
 }
 .headline{
-  font-size: 2em;
+  font-family: 'Headline', 'Arial', sans-serif;
+  font-size: 1.5em;
 }
 .events{
   list-style-type: none;
@@ -117,6 +154,9 @@ form {
     text-align: left;
   }
 }
+.byline{
+  font-size: 1em
+}
 #post_body{
   color: black;
 }
@@ -124,30 +164,7 @@ form {
   width: 78%;
   height: 24em;
 }
-.blog:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $sapphire;
-}
-.pics:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $amethyst;
-}
-.music:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $ruby;
-}
-.videos:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $amber;
-}
-.shows:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $gold;
-}
-.contact:hover {
-  -webkit-transition: border-bottom .5s;
-  border-bottom: 2px solid $emerald;
-}
+
 .left {
   text-align: left;
 }
@@ -158,7 +175,8 @@ form {
   background-color: rgb(55, 55, 72);
 }
 .muted {
-  color: gray;
+  color: $muted;
+  font-family: "Neb";
 }
 
 .padBtm{
@@ -166,11 +184,14 @@ form {
 }
 
 .mBtm{
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
 .mTop{
   margin-top: 1em;
+}
+.timestamp{
+  margin-bottom: 2em;
 }
 
 

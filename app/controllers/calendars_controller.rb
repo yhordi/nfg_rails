@@ -17,9 +17,5 @@ class CalendarsController < ApplicationController
     end
     redirect_to '/calendars'
   end
-  private
 
-  def calendar_params
-    params.require(:calendar).permit(:summary, :time, :description, :location, :maplink)
-  end
 end

@@ -1,5 +1,4 @@
 <% @title = "Upcoming Shows" %>
-<div>
   <h1 class="neb">Upcoming Shows and Events</h2>
   <% @calendars.each do |item| %>
   <ul class="events">
@@ -19,7 +18,6 @@
     </ul>
   </ul>
   <% end %>
-</div>
 <% if session[:id] != nil %>
   <p class="notice">Add or make changes to events through google calendar.</p>
   <%= form_for @calendar do |f| %>

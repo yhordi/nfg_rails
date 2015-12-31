@@ -8,43 +8,47 @@
 </head>
 
 <body>
-      <% if session[:id] != nil %>
-        <%= render "sessions/show" %>
-      <% end %>
-      <div class="stars">
-        <div class="laser redLaser"></div>
-        <div class="laser blueLaser"></div>
-        <div class="laser greenLaser"></div>
-        <div class="laser orangeLaser"></div>
-        <div class="laser goldLaser"></div>
-        <div class="laser purpleLaser"></div>
-        <div class="nebTop center">
-          <%= image_tag('logo.png', class: "logo") %>
-        </div>
-      </div>
-      <% if flash[:success] %>
-      <p class="success">
-        <%= flash[:success] %>
-      </p>
-      <% end %>
-
-      <ul class="nav center">
-        <li class="blog"> <a class="fancy" href="/">Blog</a> </li>
-<!--         <li class="pics"> <a class="fancy" href="">Pics</a> </li> -->
-        <!-- <li class="music"> <a class="fancy" href="http://nebulaforcego.bandcamp.com/">Music</a> </li> -->
-        <li class="videos"> 
-          <%= link_to "Videos", videos_path, class: "fancy" %> </li>
-        <li class="shows"> 
-          <%= link_to "Upcoming Shows", calendars_path, class: "fancy" %>
-        </li>
-        <li class="contact">
-          <%= link_to "Contact Us", new_contact_path, class: "fancy" %>
-        </li>
-      </ul>
-    <div class="container">
-        <div>
-          <%= yield %>
-        </div>
+  <% if session[:id] != nil %>
+  <%= render "sessions/show" %>
+  <% end %>
+  <div class="stars">
+    <div class="laser redLaser"></div>
+    <div class="laser blueLaser"></div>
+    <div class="laser greenLaser"></div>
+    <div class="laser orangeLaser"></div>
+    <div class="laser goldLaser"></div>
+    <div class="laser purpleLaser"></div>
+    <div class="nebTop center">
+      <%= image_tag('logo.png', class: "logo") %>
     </div>
-</body>
-</html>
+  </div>
+  <% if flash[:success] %>
+  <p class="success">
+    <%= flash[:success] %>
+  </p>
+  <% end %>
+  <div class="container">
+    <div class="row mBtm">
+      <ul class="nav center">
+        <li class="navItem "> 
+          <a class="news" href="/">NEWS</a> 
+        </li>
+        <li class="navItem "> 
+          <%= link_to "MEDIA", videos_path, class: "media" %> </li>
+          <li class="navItem "> 
+            <%= link_to "CALENDAR", calendars_path, class: "calendar" %>
+          </li>
+          <li class="navItem ">
+            <%= link_to "CONTACT", new_contact_path, class: "contact" %>
+          </li>
+          <!--         <li class="ABOUT"> <a class="fancy" href="">Pics</a> </li> -->
+          <!-- <li class="MUSIC"> <a class="fancy" href="http://nebulaforcego.bandcamp.com/">Music</a> </li> -->
+
+        </ul>
+      </div>
+      <div>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+  </html>
