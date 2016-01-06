@@ -1,4 +1,7 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :api_response do
+    
+  end
+
   factory :user do
     username { Faker::Internet.user_name(8) }
     password { Faker::Internet.password}
