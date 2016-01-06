@@ -8,7 +8,7 @@ class VideosController < ApplicationController
 
   def create
     # Video.delete_all
-    # quota_guard_proxy
+    quota_guard_proxy
     # p parse_json["items"]
     ap get_youtube_channel
     resp = ApiResponse.new(name: 'youtube', body: get_youtube_channel)
