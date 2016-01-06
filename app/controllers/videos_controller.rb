@@ -14,6 +14,7 @@ class VideosController < ApplicationController
     else
       old_repsonse = ApiResponse.find_by_name('youtube')
       old_repsonse.update!(body: resp.body)
+      p '*'*50
       ap parse(old_repsonse)
     end
     # parse_json["items"].each do |item|
