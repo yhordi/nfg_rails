@@ -10,6 +10,7 @@ class VideosController < ApplicationController
     # Video.delete_all
     # quota_guard_proxy
     # p parse_json["items"]
+    ap get_youtube_channel
     resp = ApiResponse.new(name: 'youtube', body: get_youtube_channel)
     if resp.body.valid?
       resp.save!
