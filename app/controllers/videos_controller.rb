@@ -12,7 +12,7 @@ class VideosController < ApplicationController
     # p parse_json["items"]
     ap get_youtube_channel
     resp = ApiResponse.new(name: 'youtube', body: get_youtube_channel)
-    if resp.body.valid?
+    if resp.valid?
       resp.save!
     else
       old_repsonse = ApiResponse.find_by_name('youtube')
