@@ -8,11 +8,17 @@ class VideosController < ApplicationController
 
   def create
     # Video.delete_all
-    parse_youtube
     # quota_guard_proxy
     # p parse_json["items"]
+    resp = ApiResponse.new(name: 'youtube', body: get_youtube_channel)
+    if resp.body.valid?
+      resp.save!
+    else
+      old_repsonse = ApiResponse.find_by_name('youtube')
+      old_repsonse.update!(body: resp.body)
+    end
 
-    RestClient.get("https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=PLWUsmk9lG38A4u9D2bYNNbD1o4hwd3nB7&key=#{ENV['GCAL_KEY']}")
+    ap parse(old_repsonse)
 
     # parse_json["items"].each do |item|
       # video_info = item["snippet"]["resourceId"]

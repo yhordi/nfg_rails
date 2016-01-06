@@ -8,11 +8,8 @@ module HttpHelper
     JSON.parse(RestClient.get("https://www.googleapis.com/calendar/v3/calendars/nebulaforcego%40gmail.com/events?key=#{ENV['GCAL_KEY']}").body).as_json
   end
 
-  def parse_youtube_channel
-    response = RestClient.get("https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=PLWUsmk9lG38A4u9D2bYNNbD1o4hwd3nB7&key=#{ENV['GCAL_KEY']}")
-    parse!(response)
+  def get_youtube_channel
+    RestClient.get("https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=PLWUsmk9lG38A4u9D2bYNNbD1o4hwd3nB7&key=#{ENV['GCAL_KEY']}")
   end
-
-  
 end
 
