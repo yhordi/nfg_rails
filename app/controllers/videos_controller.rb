@@ -6,8 +6,9 @@ class VideosController < ApplicationController
   end
 
   def create
-    Video.delete_all
+    # Video.delete_all
     quota_guard_proxy
+    p parse_json
     parse_json["items"].each do |item|
       video_info = item["snippet"]["resourceId"]
       if video_info["kind"] == "youtube#video"
