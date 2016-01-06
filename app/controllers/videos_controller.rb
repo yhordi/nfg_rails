@@ -8,8 +8,10 @@ class VideosController < ApplicationController
 
   def create
     quota_guard_proxy
-    resp = ApiResponse.new(name: 'youtube', body: get_youtube_channel)
+    ap resp = ApiResponse.new(name: 'youtube', body: get_youtube_channel)
     if resp.valid?
+      # theory is that the responses are different each time so this isn't working
+
       resp.save!
     else
       old_repsonse = ApiResponse.find_by_name('youtube')
