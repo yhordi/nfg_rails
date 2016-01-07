@@ -1,3 +1,3 @@
 class Video < ActiveRecord::Base
-  validates :link, :presence => true
+  validates :link, presence: true, uniqueness: true
 end
