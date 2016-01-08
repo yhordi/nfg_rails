@@ -3,7 +3,7 @@
 <%= @parse %>
 <% @videos.each do |video| %>
   <div class="center">
-    <iframe class="video"src="<%= "#{video.link}" %>"></iframe>
+    <iframe class="video" frameborder="0" src="<%= "#{video.link}" %>" allowfullscreen></iframe>
   </div>
 <% end %>
 <% if session[:id] != nil %>
