@@ -19,7 +19,7 @@ class VideosController < ApplicationController
                           content_length: youtube_content_length)
     end
 
-    response_hash = parse(stored_youtube_response)
+    response_hash = parse(stored_youtube_response.body)
     response_hash["items"].each do |item|
       Video.create(link: "https://www.youtube.com/embed/#{item["contentDetails"]["videoId"]}")
     end
