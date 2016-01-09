@@ -13,7 +13,7 @@ class VideosController < ApplicationController
     if stored_youtube_response == nil
       ApiResponse.create(name: 'youtube',
                          body: get_youtube_channel,
-                         content_length: content_length)
+                         content_length: youtube_content_length)
     elsif youtube_content_length != stored_youtube_response.content_length
       ApiResponse.update!(body: get_youtube_channel, 
                           content_length: youtube_content_length)
