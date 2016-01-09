@@ -23,7 +23,6 @@ class VideosController < ApplicationController
     response_hash["items"].each do |item|
       Video.create(link: "https://www.youtube.com/embed/#{item["contentDetails"]["videoId"]}")
     end
-    # hash["items"].each { |item| puts item["contentDetails"]["videoId"] }
 
     redirect_to '/videos'
   end
