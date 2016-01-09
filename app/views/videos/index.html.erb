@@ -1,3 +1,12 @@
+<% if session[:id] != nil %>
+  <%= form_for Video.new do |f| %>
+    <% if Video.first == nil %>
+      <%= f.submit "Seed Videos" %>
+    <% else %>
+      <%= f.submit "Refresh Videos" %>
+    <% end %>
+  <% end %>
+<% end %>
 <% @title = "Videos" %>
 <h1 class="center neb">Videos</h1>
 <%= @parse %>
@@ -5,13 +14,4 @@
   <div class="center">
     <iframe class="video" frameborder="0" src="<%= "#{video.link}" %>" allowfullscreen></iframe>
   </div>
-<% end %>
-<% if session[:id] != nil %>
-  <%= form_for Video.new do |f| %>
-    <% if Video.first == nil %>
-      <%= f.submit "Create" %>
-    <% else %>
-      <%= f.submit "Refresh" %>
-    <% end %>
-  <% end %>
 <% end %>
