@@ -1,5 +1,6 @@
 include JSON
 require_relative '../app/helpers/http_helper'
+include HttpHelper
 # Post.create({
 #   title: 'About Nebula Force, Go!',
 #   author: 'Emerald',
