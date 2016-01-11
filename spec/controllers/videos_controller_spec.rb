@@ -22,12 +22,11 @@ describe VideosController do
     end
     context 'when the database has no youtube responses' do
       it "creates video links in the database" do
-        # video = parse(youtube)["items"][0]["videoId"]
-        # expect(Video).to receive(:new).with({:link => "http://youtube.com/embed/#{video}"}).and_call_original
         post :create
         expect(Video.first).to_not be_nil
       end
-      xit 'creates a new ApiResponse in the database' do
+      it 'creates a new ApiResponse in the database' do
+        expect{post :create}.to change{ApiResponse.all.count}.by(1)
       end
     end
     context 'when the database has a youtube response' do
