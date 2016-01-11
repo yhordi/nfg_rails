@@ -1,5 +1,4 @@
 require 'rails_helper'
-# include JSON
 describe VideosController do
   let!(:user) { FactoryGirl.create :user }
   let(:attributes) { FactoryGirl.attributes_for :video }
@@ -29,8 +28,12 @@ describe VideosController do
         expect{post :create}.to change{ApiResponse.all.count}.by(1)
       end
     end
-    context 'when the database has a youtube response' do
-      xit 'updates the old ApiResponse with a new body'
+    context 'when the database has a youtube response with a different content length than the response from youtube' do
+      let(:youtube) { FactoryGirl.create :api_response}
+          post :create
+          expect(youtube.reload.content_length).to eq(youtube.content_length)
+        end
     end
+
   end
 end
