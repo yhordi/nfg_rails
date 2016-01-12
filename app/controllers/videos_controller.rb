@@ -15,10 +15,9 @@ class VideosController < ApplicationController
         body: get_youtube_channel,
         content_length: youtube_content_length)
     elsif youtube_content_length != stored_youtube_response.content_length
-      p stored_youtube_response
-      # stored_youtube_response.update(
-      #   body: get_youtube_channel, 
-      #   content_length: youtube_content_length)
+      stored_youtube_response.update(
+        body: get_youtube_channel.body, 
+        content_length: youtube_content_length)
     end
 
     response_hash = parse(stored_youtube_response.body)

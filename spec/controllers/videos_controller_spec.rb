@@ -30,9 +30,10 @@ describe VideosController do
     end
     context 'when the database has a youtube response with a different content length than the response from youtube' do
       let(:youtube) { FactoryGirl.create :api_response}
+      it 'changes an attribute of an existing ApiResponse in the database' do
           post :create
           expect(youtube.reload.content_length).to eq(youtube.content_length)
-        end
+      end
     end
 
   end
