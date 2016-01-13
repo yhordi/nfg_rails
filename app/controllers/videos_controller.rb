@@ -8,7 +8,7 @@ class VideosController < ApplicationController
 
   def create
     quota_guard_proxy
-    ApiResponse.create_or_update_response('youtube')
+    ApiResponse.create_or_update('youtube')
     stored_youtube_response = ApiResponse.find_by_name('youtube')
     stored_youtube_response.create_videos
     redirect_to '/videos'
