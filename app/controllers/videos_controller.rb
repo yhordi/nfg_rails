@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   include HttpHelper
-  include JsonHelper
+  include JSON
 
   def index
     @videos = Video.all
@@ -16,5 +16,6 @@ class VideosController < ApplicationController
     end
     redirect_to '/videos'
   end
+  
 end
 

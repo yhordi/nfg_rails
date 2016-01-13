@@ -1,6 +1,4 @@
-require 'api_response_concern'
 class ApiResponse < ActiveRecord::Base
-  include ApiResponseConcern
   validates :body, uniqueness: true, presence: true
   validates :name, uniqueness: true, presence: true
   validates :content_length, presence: true
@@ -23,6 +21,7 @@ class ApiResponse < ActiveRecord::Base
     channel.headers[:content_length].to_i    
   end
 
+
   def self.get_youtube_channel
     RestClient.get("https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=50&playlistId=PLWUsmk9lG38A4u9D2bYNNbD1o4hwd3nB7&fields=items&key=#{ENV['GCAL_KEY']}")
   end
@@ -44,4 +43,12 @@ class ApiResponse < ActiveRecord::Base
       :alt_svc => "quic=\":443\"; ma=604800; v=\"30,29,28,27,26,25\""
     }
   end
+
+  def create_videos
+    response_hash = parse(stored_youtube_response.body)
+    response_hash["items"].each do |item|
+      Video.create(link: "https://www.youtube.com/embed/#{item["contentDetails"]["videoId"]}")
+    end
+  end
+
 end
