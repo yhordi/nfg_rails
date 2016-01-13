@@ -9,6 +9,7 @@ RSpec.describe ApiResponse, :type => :model do
   end
   describe 'custom methods' do
     let(:response_double) { double("response", body: youtube, headers: youtube_headers) }
+
     before(:each) do
       allow(RestClient).to receive(:get).and_return(response_double.body)
       RestClient.stub_chain(:get, :headers).and_return(response_double.headers)
@@ -30,6 +31,16 @@ RSpec.describe ApiResponse, :type => :model do
     describe '#create_response' do
       it 'creates an ApiResponse in the database on success' do
         expect{ApiResponse.create_response('youtube')}.to change{ApiResponse.count}.by(1)
+      end
+    end
+    describe '#update_response' do
+      let(:stored_youtube) { FactoryGirl.create :api_response}
+      let(:update_double) { double(
+        "response", body: {items: "jello"}.to_json, headers: {content_length: "234098"}) }
+      it 'updates an existing ApiResponse in the database' do
+        allow(RestClient).to receive(:get).and_return(update_double)
+        ApiResponse.update_response(stored_youtube)
+        expect(stored_youtube.content_length).to eq(update_double.headers[:content_length].to_i)
       end
     end
   end
