@@ -1,4 +1,5 @@
 class ApiResponse < ActiveRecord::Base
+  include JSON
   validates :body, uniqueness: true, presence: true
   validates :name, uniqueness: true, presence: true
   validates :content_length, presence: true
@@ -45,7 +46,7 @@ class ApiResponse < ActiveRecord::Base
   end
 
   def create_videos
-    response_hash = parse(stored_youtube_response.body)
+    response_hash = parse(self.body)
     response_hash["items"].each do |item|
       Video.create(link: "https://www.youtube.com/embed/#{item["contentDetails"]["videoId"]}")
     end
