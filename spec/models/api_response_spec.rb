@@ -43,5 +43,18 @@ RSpec.describe ApiResponse, :type => :model do
         expect(stored_youtube.content_length).to eq(update_double.headers[:content_length].to_i)
       end
     end
+    describe '#create_or_update' do
+      it 'calls #create_response when database is empty' do
+        expect(ApiResponse).to receive(:create_response).with('youtube')
+        ApiResponse.create_or_update('youtube')
+      end
+      context 'when the database has a matching response' do
+        let!(:youtube) { FactoryGirl.create :api_response}
+        it 'calls #update_response ' do
+          expect(ApiResponse).to receive(:update_response).with(youtube)
+          ApiResponse.create_or_update('youtube')
+        end
+      end
+    end
   end
 end
