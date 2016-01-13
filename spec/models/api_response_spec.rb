@@ -27,5 +27,10 @@ RSpec.describe ApiResponse, :type => :model do
       xit 'responds with a non ok status code on failure' do
       end
     end
+    describe '#create_response' do
+      it 'creates an ApiResponse in the database on success' do
+        expect{ApiResponse.create_response('youtube')}.to change{ApiResponse.count}.by(1)
+      end
+    end
   end
 end

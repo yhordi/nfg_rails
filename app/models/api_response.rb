@@ -4,18 +4,26 @@ class ApiResponse < ActiveRecord::Base
   validates :name, uniqueness: true, presence: true
   validates :content_length, presence: true
 
-  def self.create_or_update_response(name)
+  def self.response_fork(name)
     stored_response = ApiResponse.find_by_name(name)
     if stored_response == nil
-      stored_response = ApiResponse.create!(
-        name: name,
-        body: get_youtube_channel,
-        content_length: youtube_content_length(get_youtube_channel))
+      ApiResponse.create_response(name)
     elsif youtube_content_length(get_youtube_channel) != stored_response.content_length
-      stored_response.update!(
-        body: get_youtube_channel.body, 
-        content_length: youtube_content_length(get_youtube_channel))
+      ApiResponse.update_response(stored_response)
     end
+  end
+
+  def self.create_response(name)
+    stored_response = ApiResponse.create!(
+      name: name,
+      body: get_youtube_channel,
+      content_length: youtube_content_length(get_youtube_channel))
+  end
+
+  def self.update_response(response)
+    response.update!(
+      body: get_youtube_channel.body, 
+      content_length: youtube_content_length(get_youtube_channel))
   end
 
   def self.youtube_content_length(channel)
