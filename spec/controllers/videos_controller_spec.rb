@@ -35,6 +35,5 @@ describe VideosController do
           expect(youtube.reload.content_length).to eq(youtube.content_length)
       end
     end
-
   end
 end

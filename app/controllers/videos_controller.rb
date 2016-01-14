@@ -13,6 +13,4 @@ class VideosController < ApplicationController
     stored_youtube_response.create_videos
     redirect_to '/videos'
   end
-
 end
-
