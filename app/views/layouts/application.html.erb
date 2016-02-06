@@ -4,6 +4,7 @@
   <title><%= @title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 
@@ -30,12 +31,12 @@
   <div class="container">
     <div class="row mBtm">
       <ul class="nav center">
-        <li class="navItem "> 
-          <a class="news" href="/">NEWS</a> 
+        <li class="navItem ">
+          <a class="news" href="/">NEWS</a>
         </li>
-        <li class="navItem "> 
+        <li class="navItem ">
           <%= link_to "MEDIA", videos_path, class: "media" %> </li>
-          <li class="navItem "> 
+          <li class="navItem ">
             <%= link_to "CALENDAR", calendars_path, class: "calendar" %>
           </li>
           <li class="navItem ">

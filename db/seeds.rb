@@ -14,3 +14,15 @@ user = User.create({
   username: 'emerald',
   password: ENV['PASSWORD']
 })
+
+Video.create({
+  link: "https://www.youtube.com/embed/_BHSGgxz4ek"
+})
+
+Video.create({
+  link: "https://www.youtube.com/embed/xWvGOLP3uRM"
+})
+
+Video.create({
+  link: "https://www.youtube.com/embed/Y1gqz5nrmMg"
+})

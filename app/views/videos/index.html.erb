@@ -3,7 +3,10 @@
 <%= @parse %>
 <% @videos.each do |video| %>
   <div class="center">
-    <iframe class="video"src="<%= "#{video.link}" %>"></iframe>
+    <div id="video-gallery">
+      <a href= "<%= "#{video.link}" %>" >
+      </a>
+    </div>
   </div>
 <% end %>
 <% if session[:id] != nil %>
