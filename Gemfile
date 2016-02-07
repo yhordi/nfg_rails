@@ -24,7 +24,6 @@ gem 'pry-nav'
 gem 'awesome_print'
 gem 'rest-client'
 gem 'rspec_junit_formatter', '0.2.2'
-
 gem 'rails_12factor', group: :production
 gem 'rack_session_access', group: :test
 group :development, :test do

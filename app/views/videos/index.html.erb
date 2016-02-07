@@ -1,14 +1,15 @@
 <% @title = "Videos" %>
 <h1 class="center neb">Videos</h1>
 <%= @parse %>
-<% @videos.each do |video| %>
   <div class="center">
     <div id="video-gallery">
-      <a href= "<%= "#{video.link}" %>" >
-      </a>
+      <% @videos.each do |video| %>
+            <a href="https://www.youtube.com/watch?v=_f-EqH6JpNE">
+              <img class="small" src="<%= image_path("Usher12.jpg") %>"/>
+            </a>
+      <% end %>
     </div>
   </div>
-<% end %>
 <% if session[:id] != nil %>
   <%= form_for Video.new do |f| %>
     <% if Video.first == nil %>
