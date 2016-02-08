@@ -14,7 +14,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'google-api-client'
 gem 'dotenv-rails'
 gem "omniauth-google-oauth2"
-gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
@@ -24,17 +23,15 @@ gem 'pry-nav'
 gem 'awesome_print'
 gem 'rest-client'
 gem 'rspec_junit_formatter', '0.2.2'
-
 gem 'rails_12factor', group: :production
-gem 'rack_session_access', group: :test
-group :development, :test do
+group :test do
+  gem 'rack_session_access'
   gem 'simplecov', :require => false
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'nyan-cat-formatter'
   gem 'selenium-webdriver', '2.45.0'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
 end
-# gem 'rails_12factor', group: :production
 

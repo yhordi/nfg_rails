@@ -1,4 +1,5 @@
 module HttpHelper
+  include JSON
   def quota_guard_proxy
     RestClient.proxy = "http://quotaguard2292:dbe18e7f7d41@us-east-1-static-brooks.quotaguard.com:9293"
   end
@@ -7,4 +8,3 @@ module HttpHelper
     JSON.parse(RestClient.get("https://www.googleapis.com/calendar/v3/calendars/nebulaforcego%40gmail.com/events?key=#{ENV['GCAL_KEY']}").body).as_json
   end
 end
-

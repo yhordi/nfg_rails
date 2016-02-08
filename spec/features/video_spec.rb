@@ -8,7 +8,7 @@ describe 'Video with empty database', js: true do
         visit videos_path
     end
     it "should display a create button to the user" do
-      expect(page).to have_button("Create")
+      expect(page).to have_button("Seed Videos")
     end
   end
 end
