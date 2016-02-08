@@ -1,20 +1,16 @@
 class VideosController < ApplicationController
   include HttpHelper
+  include JSON
 
   def index
     @videos = Video.all
   end
 
   def create
-    Video.delete_all
     quota_guard_proxy
-    parse_json["items"].each do |item|
-      video_info = item["snippet"]["resourceId"]
-      if video_info["kind"] == "youtube#video"
-        Video.create(link: "http://youtube.com/embed/#{video_info["videoId"]}")
-      end
-    end
+    ApiResponse.create_or_update('youtube')
+    stored_youtube_response = ApiResponse.find_by_name('youtube')
+    stored_youtube_response.create_videos
     redirect_to '/videos'
   end
 end
-

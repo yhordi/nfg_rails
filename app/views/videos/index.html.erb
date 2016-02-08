@@ -62,9 +62,10 @@
 <% if session[:id] != nil %>
   <%= form_for Video.new do |f| %>
     <% if Video.first == nil %>
-      <%= f.submit "Create" %>
+      <%= f.submit "Seed Videos" %>
     <% else %>
-      <%= f.submit "Refresh" %>
+      <%= f.submit "Refresh Videos" %>
     <% end %>
   <% end %>
 <% end %>
+
