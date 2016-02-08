@@ -197,3 +197,38 @@ form {
 .small {
   width: 10em;
 }
+.gal{
+  list-style: none outside none;
+  padding-left: 0;
+  margin-bottom:0;
+}
+.demo {
+    /*width:420px;*/
+    margin: 0 auto;
+}
+ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+.gal li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+}
+.galimg {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.thumb {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+}
+.lSPager{
+      display: inline-flex;
+}
+
